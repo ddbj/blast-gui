@@ -1,0 +1,34 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<document xmlns="http://maven.apache.org/XDOC/2.0" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+	xsi:schemaLocation="http://maven.apache.org/XDOC/2.0 http://maven.apache.org/xsd/xdoc-2.0.xsd">
+
+	<properties>
+		<title>Page Title</title>
+		<author email="osamu.ogasawara@gmail.com">Osamu Ogasawara</author>
+	</properties>
+
+	<!-- Optional HEAD element, which is copied as is into the XHTML <head> 
+		element -->
+	<head>
+		<title>Developers Manual - Design</title>
+	</head>
+
+	<body>
+	<section name="画面遷移">
+	<p>概略以下のとおり。</p>
+	<ol>
+	<li>最初は例えばblast/blastnからフォームにデータを入れてsubmit.</li>
+	<li>blast/reportページに遷移</li>
+	<li>blast/reportページはAJAX経由でPOSTメソッドを発行する。=> requestIdを取得。</li>
+	<li>blast/reportページはAJAX経由でGETメソッドを発行する。=> statusを取得。</li>
+	<li>blast/reportページはAJAX経由でBLASTの結果を取得し表示する。</li>
+	</ol>	
+	</section>
+	
+	<section name="blastnの画面からパラメータを受け取る。">
+	
+	
+	</section>
+
+	</body>
+</document>

@@ -1,0 +1,66 @@
+<?xml version="1.0" encoding="UTF-8" ?>
+<beans xmlns="http://www.springframework.org/schema/beans"
+	xmlns:context="http://www.springframework.org/schema/context"
+	xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:mvc="http://www.springframework.org/schema/mvc"
+	xsi:schemaLocation="
+	     http://www.springframework.org/schema/mvc
+	     http://www.springframework.org/schema/mvc/spring-mvc-3.0.xsd
+        http://www.springframework.org/schema/beans     
+        http://www.springframework.org/schema/beans/spring-beans-3.0.xsd
+        http://www.springframework.org/schema/context 
+        http://www.springframework.org/schema/context/spring-context-3.0.xsd">
+
+	<context:component-scan base-package="jp.ac.nig.ddbj.blast" />
+
+	<mvc:annotation-driven />
+	<mvc:resources mapping="/resources/**" location="/resources/" />
+
+
+
+	<!-- Internationalization -->
+	<mvc:interceptors> 
+      <bean id="localeChangeInterceptor" class="org.springframework.web.servlet.i18n.LocaleChangeInterceptor">
+          <property name="paramName" value="lang" />
+      </bean>
+    </mvc:interceptors>    
+    
+    <bean id="messageSource" class="org.springframework.context.support.ReloadableResourceBundleMessageSource">
+        <property name="basename" value="WEB-INF/i18n/messages"/>
+        <property name="defaultEncoding" value="UTF-8" />        
+    </bean>
+    
+    <bean id="localeResolver" class="jp.ac.nig.ddbj.blast.servlet.BlastCookieLocaleResolver">
+        <property name="cookieName" value="locale" />
+        <property name="defaultLocale" value="en" />
+    </bean>
+
+    <bean id="multipartResolver" class="org.springframework.web.multipart.commons.CommonsMultipartResolver">
+	<property name="maxUploadSize" value="100000"/>
+    </bean>
+
+
+	<!-- View bean(s) -->
+	<bean id="blast_post" class="jp.ac.nig.ddbj.blast.view.StreamToPostRequestView" />
+	<bean id="blast_status" class="jp.ac.nig.ddbj.blast.view.StreamToGetStatusRequestView" />
+	<bean id="blast_result" class="jp.ac.nig.ddbj.blast.view.StreamToGetResultRequestView" />
+	<bean id="blast_image" class="jp.ac.nig.ddbj.blast.view.BlastOutputImageFile" />
+	<bean id="blast_request" class="jp.ac.nig.ddbj.blast.view.StreamToGetUserRequestView" />
+
+
+	<!--  View resolvers -->
+	<bean class="org.springframework.web.servlet.view.BeanNameViewResolver" />
+	
+
+	<!-- Declaring that this site uses Apache Tiles version 2 for the view module. -->
+	<bean class="org.springframework.web.servlet.view.tiles2.TilesViewResolver" />
+
+	<!-- Declaring the path of configuration file for Apache Tiles. -->
+	<bean class="org.springframework.web.servlet.view.tiles2.TilesConfigurer">
+		<property name="definitions">
+			<list>
+				<value>/WEB-INF/tiles.xml</value>
+			</list>
+		</property>
+	</bean>
+
+</beans>

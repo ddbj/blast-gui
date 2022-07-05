@@ -1,0 +1,2961 @@
+/*
+ * Theme Name: DDBJ
+ * /
+
+-------------------------------------------------------------- */
+
+html, body, div, span, applet, object, iframe,
+h1, h2, h3, h4, h5, h6, p, blockquote, pre,
+a, abbr, acronym, address, big, cite, code,
+del, dfn, em, font, img, ins, kbd, q, s, samp,
+small, strike, strong, sub, sup, tt, var,
+b, u, i, center,
+dl, dt, dd, ol, ul, li,
+fieldset, form, label, legend,
+table, caption, tbody, tfoot, thead, tr, th, td {
+	background: transparent;
+	border: 0;
+	margin: 0;
+	padding: 0;
+	/*vertical-align: baseline;*/
+	vertical-align: middle;
+}
+
+img { border:0; }
+a img { border: none; }
+/* 挿入画像をセンタリングする為の設定 */
+img {
+	margin: 0;
+	height: auto;
+	max-width: 900px;
+	width: auto;
+}
+img.aligncenter { display:block; margin-left:auto; margin-right:auto; }
+img.alignright {
+	display: inline;
+	float: right;
+	margin-left: 10px;
+	margin-top: 4px;
+}
+img.alignleft {
+	display: inline;
+	float: left;
+	margin: 2em 1em;
+}
+html { height:100%; }
+
+table { border-collapse: collapse;  border-spacing: 0; }
+
+body {
+	font-family: "ヒラギノ角ゴ Pro W3", "Hiragino Kaku Gothic Pro", "メイリオ", Meiryo, Osaka, "ＭＳ Ｐゴシック", "MS PGothic", sans-serif;
+	height: 100%;
+	color: #474546;
+	text-align: left;
+	background-color: #333;
+	font-size: 0.8em;
+	line-height: 1.2;
+	margin: 0px;
+	padding: 0px;
+	}
+
+* html div#container {
+	height:100%;
+	width:100%;
+	}
+* body > #container {
+	min-height: 45em;
+	margin: 5px auto;
+	min-width: 830px;
+	}
+*/*body > #container { height: auto;}*/
+
+#container {
+	width: 96%;
+/*	margin: 5px 0 0 20px ;*/
+	background-color: #fff;
+/*	min-height: 100%	*/
+	overflow: hidden;
+	}
+
+a:link { color: #134ec6; text-decoration: none; }
+a:visited { color: #4976d1; text-decoration: none; }
+a:active { color: #134ec6; text-decoration: none; }
+a:hover { color: #134ec6; text-decoration: underline; }
+
+/* ヘッダ
+============================================================================================ */
+/* header
+-------------------------------------------------------------- */
+#header {
+	height: 75px;
+	width: 100%;
+	padding-top:5px; /* by KS */
+	}
+
+.logo_area {
+	width: 100%;
+	float: left;
+	}
+
+.logo {
+	width: 191px;
+	height: 68px;
+	text-align: left;
+	float: left;
+	margin-left: 10px;
+	}
+
+.logo a:hover {
+	opacity: 0.9;
+	filter: alpha( opacity= 90 );
+	-ms-filter: "alpha( opacity= 90 )";
+	}
+
+.concept {
+	width: 635px;
+	height: 124px;
+	margin-left: 200px;
+/*	margin-left: 330px;*/
+	margin-top: 10px;
+	padding: 5px;
+	background-color: #f2f2f2;
+	}
+
+.concept img {
+	width: 635px;
+	height: 124px;
+	}
+
+/* ナビゲーション
+---------------------------------------------------------------------------------------------*/
+/** 通常ページ **/
+#navi {
+	float: left;
+	width: 100%;
+	height: 48px;
+	list-style: none;
+	margin-top: 5px;
+	background: url(../../images/menu_normal.png) repeat-x left top;
+	}
+
+#navi ul {
+	width: 100%;
+	height: 48px;
+	margin: 0 auto;
+	list-style-type: none;
+	white-space: nowrap;
+	}
+
+#navi li {
+	width: 16%;
+	height: 48px;
+	float: left;
+	border-left: solid 1px #ffa100;
+	border-right: solid 1px #ff6e02;
+	text-align: center;
+	white-space: nowrap;
+	}
+
+#navi li a:link,
+#navi li a:visited {
+	float: left;
+	height: 48px;
+	color: #fffff0;
+	font-weight: bold;
+	text-decoration: none;
+	padding: 16px 0 0 0;
+	width: 100%;
+	}
+
+#navi li a:hover {
+	float: left;
+	height: 48px;
+	color: #fff;
+	text-decoration: none;
+	width: 100%;
+	padding: 16px 0 0 0;
+	background: url(../../images/menu_current.png) repeat-x left top;
+	opacity: 0.8;
+	filter: alpha( opacity= 80 );
+	-ms-filter: "alpha( opacity= 80 )";
+	}
+
+#navi li.current_page_item a:link,
+#navi li.current_page_item a:visited {
+	float: left;
+	color: #fffff0;
+	text-decoration:none;
+	text-align:center;
+	width: 100%;
+	padding: 16px 0 0 0;
+	background: url(../../images/menu_hover.png) repeat-x left top;
+	}
+
+/** 登録ページ用 **/
+#navi_sub {
+        float: left;
+        width: 100%;
+        height: 48px;
+        margin-top: 5px;
+        background: url(../../images/menu_normal_yellow2.png) repeat-x left top;
+        display: block;
+        }
+#navi_sub ul {
+        margin: 0 auto;
+        list-style: none;
+        height: 48px;
+        width: 100%;
+        font-size: 12px;
+        font-weight: bold;
+        }
+#navi_sub ul li {
+        position: relative;
+        float: left;
+        border-left: solid 1px #f0e68c;
+        border-right: solid 1px #ffd402;
+        height: 48px;
+        width: 16% ;
+        text-align: center;
+        }
+#navi_sub ul li a {
+        color: #696969;
+        display: block;
+        line-height: 4em;
+        padding: 0 0;
+        text-decoration: none;
+}
+#navi_sub ul ul {
+        display: none;
+        float: left;
+        margin: 0;
+        position: absolute;
+        top: 4em;
+        left: 0;
+        z-index: 99999;
+        }
+#navi_sub ul ul li {
+        width: 210px;
+        border: 1px solid #696969;
+        }
+#navi_sub ul ul li a {
+	background: #000000;
+	color: #f9f9f9;
+        font-size: 13px;
+        font-weight: normal;
+        width: 200px;
+        height: 48px;
+        border: 1px solid #696969;
+        text-align: left;
+        padding-left: 10px;
+        }
+#navi_sub li:hover > a {
+        background: url(../../images/menu_current_yellow.png) repeat-x left top;
+        }
+#navi_sub ul ul :hover > a,
+#navi_sub a:focus {
+	background: #003acd;
+        }
+#navi_sub li.current-menu-item {
+        background: url(../../images/menu_hover_yellow2.png) repeat-x left top;
+}
+#navi_sub li.current-menu-item:hover > a,
+#navi_sub a: {
+        background: url(../../images/menu_hover_yellow2.png) repeat-x left top;
+        }
+#navi_sub ul li:hover > ul {
+        display: block;
+        }
+/* 検索・言語切替
+---------------------------------------------------------------------------------------------*/
+.searchBar {
+/*	background-color: #f2f2f2;*/
+	height: 38px;
+/*	padding-top: 8px;*/
+	text-align: right;
+	width: 75%;
+	margin-top: 7px;
+	float: right;
+	}
+#language-box {
+	width: 70%;
+	height: 25px;
+	float: right;
+	padding-right: 20px;
+	font-size: 120%;
+}
+#language-box .btn {
+        float: right;
+        text-decoration: none;
+        font-weight: bold;
+        text-align: center;
+        color: #fff;
+        font-size: 12px;
+        display: block;
+        border: 1px solid #adadad;
+/*        background: -moz-linear-gradient(top,#4d90fe 0%,#4787ed);
+        background: -webkit-gradient(linear, left top, left bottom, from(#4d90fe), to(#4787ed));
+	filter: progid:DXImageTransform.Microsoft.gradient(GradientType=0,startColorstr='#4d90fe', endColorstr='#4787ed');
+        border-radius: 2px;
+*/
+        background: #4d90fe;
+        -webkit-border-radius: 2px;
+        -moz-border-radius: 2px;
+/*        width: 90px;*/
+	width: 82px;
+        height: 16px;
+        padding: 6px 0 2px 4px;
+        letter-spacing: 0.1em;
+        margin-right:  4%;
+        behavior: url("/PIE/PIE.htc");
+        }
+
+#search-box {
+	float: right;
+	width: 500px;
+	height: 38px;
+	}
+
+#search-box input.search-text {
+	margin-right:  2%;
+	width: 300px;
+	height: 29px;
+	padding: 0 2px;
+	}
+
+#search-box input.search-go {
+	font-family: "ヒラギノ角ゴ Pro W3", "Hiragino Kaku Gothic Pro", "メイリオ", Meiryo, Osaka, "ＭＳ Ｐゴシック", "MS PGothic", sans-serif;
+	float: right;
+	text-decoration: none;
+	font-weight: bold;
+	text-align: center;
+	color: #474546;
+	font-size: 12px;
+	display: block;
+	border: 1px solid #adadad;
+	background: -moz-linear-gradient(top,#efefef 0%,#cfcfcf);
+	background: -webkit-gradient(linear, left top, left bottom, from(#efefef), to(#cfcfcf));
+	border-radius: 2px;
+	-webkit-border-radius: 2px;
+	-moz-border-radius: 2px;
+	width: 80px;
+	height: 30px;
+	padding: 4px 0;
+	margin: 1px 2% 0 0;
+	behavior: url("/PIE/PIE.htc");
+	}
+
+.searchBar a:hover {
+	background: -moz-linear-gradient(top,#ffffff 0%,#e2e2e2);
+	background: -webkit-gradient(linear, left top, left bottom, from(#efefef), to(#cfcfcf));
+	behavior: url("/PIE/PIE.htc");
+	}
+
+/* パンくずリスト
+---------------------------------------------------------------------------------------------*/
+#breadcrumb {
+	width: 100%;
+	height: 10px;
+	margin: 0 10px 1em 10px;
+	}
+#breadcrumb ul {
+	list-style: none;
+	margin: 0 0 0 5px;
+	}
+#breadcrumb ul li {
+	float:left;
+	padding-right: 5px;
+}
+/* サイドバー
+============================================================================================ */
+#sub {
+	position: absolute;
+/*	top: 260px;*/
+	top: 155px;
+/*position: relative;*/
+/*top: -560px;*/
+	width: 260px;
+	margin-left: -20px;
+	}
+#sub-top {
+        position: absolute;
+/*      top: 260px;*/
+	top: 250px;
+        width: 260px;
+/*margin-top:25px;*/
+        }
+
+.servicebox {
+	width: 100%;
+	text-align: left;
+	}
+
+.servicebox img {
+	margin-bottom: 6px;
+	margin-right: 10px;
+	}
+
+#sub .servicebox a:link { color: #474546; text-decoration: none; }
+#sub .servicebox a:visited { color: #474546; text-decoration: none; }
+#sub .servicebox a:active { color: #474546; text-decoration: none; }
+#sub .servicebox a:hover { color: #474546; text-decoration: none; }
+
+#sub .servicebox a {
+	margin: 0 auto;
+	text-decoration: none;
+	font-weight: bold;
+	text-align: left;
+	font-size: 12px;
+	display: block;
+	border: 1px solid #adadad;
+	background: -moz-linear-gradient(top,#ffffff 0%,#e2e2e2);
+	background: -webkit-gradient(linear, left top, left bottom, from(#ffffff), to(#e2e2e2));
+	border-radius: 2px;
+	-webkit-border-radius: 2px;
+	-moz-border-radius: 2px;
+	width: 184px;
+	height: 20px;
+	padding: 5px 0 10px 14px;
+	margin-bottom: 6px;
+	letter-spacing: 0.1em;
+	behavior: url("/PIE/PIE.htc");
+	}
+
+#sub .servicebox a:hover {
+	background: -moz-linear-gradient(top,#efefef 0%,#cfcfcf);
+	background: -webkit-gradient(linear, left top, left bottom, from(#efefef), to(#cfcfcf));
+	behavior: url("/PIE/PIE.htc");
+	}
+
+.bannertbox { text-align: center;}
+
+.bannertbox img { margin-bottom: 6px; }
+
+.bannertbox a:hover {
+	opacity: 0.8;
+	filter: alpha( opacity= 80 );
+	-ms-filter: "alpha( opacity= 80 )";
+	}
+
+.insdcbox {
+	margin-top: 25px;
+	margin-bottom: 50px;
+	width: 100%;
+	text-align: center;
+	}
+
+.insdcbox p {
+	width: 100%;
+	font-size: 75%;
+	margin-top: 0px;
+	}
+
+/* フッタ
+============================================================================================ */
+#footer {
+        width: 100%;
+        height: 110px;
+        background-color: #777777;
+        color: #d0d0d0;
+        margin-top: 18px;
+        padding-top: 10px;
+clear:both;
+}
+
+#footer_nav {
+	float: left;
+	margin-left: 40px;
+	}
+
+#footer .lastmod {
+	float: right;
+	margin-right: 10px;
+	font-size: 90%;
+	}
+
+#footer a:first-child { margin-left: 20px;}
+#footer a:link { font-size: 90%; color: #d0d0d0; text-decoration: none; }
+#footer a:visited { color: #d0d0d0; text-decoration: none; }
+#footer a:active { color: #d0d0d0; text-decoration: none; }
+#footer a:hover { color: #d0d0d0; text-decoration: underline; }
+
+/* ライセンス
+---------------------------------------------------------------------------------------------*/
+#footer .licence {
+	float:left;
+	width:100%;
+	margin: 10px 0 10px 20px;
+	}
+
+address {
+	width: 100%;
+	margin-top: 60px;
+	margin-left: 20px;
+	font-size: 90%;
+	}
+
+/* フッタメニュー　ナビゲーション
+---------------------------------------------------------------------------------------------*/
+#footer_nav ul {
+	list-style: none;
+	margin-left: -30px;
+	}
+#footer_nav ul li {
+	float: left;
+	border-right: 1px solid #fff;
+	margin-left: -10px;
+	padding: 0 7px 0 0;
+	line-height: 1;
+	}
+#footer_nav ul li.menu-item-29100 {
+	padding-left: 0;
+	}
+#footer_nav ul li.menu-item-29103 {
+	border-right: none;
+}
+#footer_nav a {
+	color: #d0d0d0;
+}
+#footer_nav a:visited {
+	color: #d0d0d0;
+}
+#footer_nav a:hover {
+	text-decoration: underline;
+	color: #d0d0d0;
+}
+
+/* コンテンツ
+============================================================================================ */
+/** content **/
+/*#content { margin: 195px 4% 0 260px; }*/
+/*#content { margin: 200px 4% 0 260px; }*/
+#content {
+	margin: 70px 1.5% 0 240px;
+	min-height: 600px;
+	}
+/*#subContent { margin: 75px 3% 0 3%; min-height: 45em;}*/
+#subContent { margin: 65px 3% 0 3%; min-height: 45em;}
+#singleContent {
+	margin: 75px 3% 0 3%;
+	min-height: 45em;
+}
+.textbox p {
+	line-height: 1.6;
+	padding: 0 0 0 0;
+	margin: 1em 0;
+	}
+/* トップページ
+============================================================================================ */
+.maintebox,
+.infobox,
+.newsbox,
+.planbox { clear: both; }
+
+/* ４つのリンクアイテム
+---------------------------------------------------------------------------------------------*/
+.planbox_area {
+	width: 100%;
+	float: left;
+	border-top: 1px solid #e7e7e7;
+	border-bottom: 1px solid #e7e7e7;
+	background-color: #f2f3eb;
+	background: -moz-linear-gradient(top, #f6f6f2, #f2f3eb);
+	background: -webkit-gradient(linear, left top, left bottom, from(#f6f6f2), to(#f2f3eb));
+	margin-bottom: 24px;
+	behavior: url("../PIE/PIE.htc");
+	}
+
+.plan_box {
+	width: 24%;
+	height: 163px;
+	float: left;
+	text-align: center;
+	padding-top: 6px;
+	}
+
+/* News
+---------------------------------------------------------------------------------------------*/
+.infobox ul,
+.maintebox ul,
+.newsbox ul {
+	list-style: none;
+	margin-top: 12px;
+	margin-bottom: 18px;
+	}
+
+.infobox ul li,
+.maintebox ul li,
+.newsbox ul li {
+	margin-bottom: 4px;
+	margin-left: 8px;
+	}
+
+.infobox span,
+.maintebox span,
+.newsbox span {
+	background: url(../../images/list_02.png) no-repeat left center;
+	float: left;
+	display: block;
+	width: 90px;
+	text-align: left;
+	margin-right: 6px;
+	padding-left: 12px;
+/*
+padding: 5px 20px;
+line-height: 2em;*/	}
+.newsbox hr {
+border:none;
+border-top:dashed 1px #777777;
+height:1px;
+color:#FFFFFF;
+}
+
+
+.infobox p,
+.maintebox p,
+.newsbox p {
+	display: block;
+	overflow: hidden;
+	zoom: 1;
+	}
+
+/* 投稿ページ
+============================================================================================ */
+.disp_update{
+	float: right;
+	margin-right: 20px;
+	}
+.disp_content{
+/*	float: left;*/
+	margin: 20px 10px 0 10px;
+	}
+
+/* 見出し
+============================================================================================ */
+/* h1
+---------------------------------------------------------------------------------------------*/
+h1 {
+	width: 100%;
+/*	height: 59px;*/
+	background: #050505 url(../../images/h1_title.png) no-repeat left center;
+	font-size: 150%;
+	font-weight: normal;
+	color: #fff;
+	letter-spacing: 0.1em;
+/*	padding: 36px 0 0 0;*/
+padding: 20px 0;
+	text-indent: 20px;
+	margin-bottom: 12px;
+	border-radius: 8px;
+	-webkit-border-radius: 8px;
+	-moz-border-radius: 8px;
+	text-shadow: 0px 0px 1px #000, 0px 0px 5px #000, 0px 0px 5px #000;
+	behavior: url("/PIE/PIE.htc");
+	}
+
+h1 a:link,
+h1 a:visited {
+	color: #FFFFFF;
+	text-decoration: underline;
+	}
+
+h1 a:hover {
+	color: #ff8901;
+	}
+
+h1 span {
+	padding-left: 20px;
+	color: #fff;
+	font-size: 60%;
+	text-decoration: none;
+	font-weight: normal;
+	}
+/* h2
+---------------------------------------------------------------------------------------------*/
+h2 {
+	background: url(../../images/list_01.png) no-repeat left center;
+	position: relative;
+	display: inline-block;
+	font-size: 120%;
+	padding: 0.6em 10px 0.5em 20px;
+	border-top: 2px solid #ff8901;
+	border-bottom: 1px solid #d0d0d0;
+	margin-top: 2em;
+	margin-bottom: 1em;
+	letter-spacing: 0.1em;
+	}
+
+h2 { display: block; }
+
+h2 span a:link,
+h2 span a:visited {
+	background: url(../../images/arrow_01.png) no-repeat left center;
+	position: absolute;
+	right: 5px;
+	top: 0.7em;
+	padding:  3px 0 0 20px;
+	color: #ff8401;
+	font-size: 84%;
+	text-decoration: none;
+	font-weight: normal;
+	}
+
+h2 span a:hover {
+	text-decoration: underline;
+	opacity: 0.9;
+	filter: alpha( opacity= 90 );
+	-ms-filter: "alpha( opacity= 90 )";
+	}
+/* h3
+---------------------------------------------------------------------------------------------*/
+h3 {
+	background: url(../../images/list_04.png) no-repeat left center;
+	font-size: 110%;
+	padding: 0.4em 0 0.2em 1.2em;
+	background-color: #d0d0d0;
+	margin: 2em 0 1em 0;
+	border-radius: 2px;
+	-webkit-border-radius: 2px;
+	-moz-border-radius: 2px;
+	behavior: url("../PIE/PIE.htc");
+	}
+
+h3 a:link,
+h3 a:active {
+	color: #134ec6;
+	text-decoration: none;
+	}
+
+h3 a:hover { color: #134ec6; text-decoration: underline; }
+h3 a:visited { color: #4976d1; text-decoration: none; }
+
+/* h4
+---------------------------------------------------------------------------------------------*/
+h4 {
+	background: url(../../images/list_03.png) no-repeat left center;
+	font-size: 110%;
+	padding: 2px 10px 0  10px;
+	border-bottom: solid 1px #d0d0d0;
+	margin: 2em 0 1em 0;
+	}
+
+h4 a:link,
+h4 a:active {
+	color: #134ec6;
+	text-decoration: none;
+	}
+
+h4 a:hover { color: #134ec6; text-decoration: underline; }
+h4 a:visited { color: #4976d1; text-decoration: none; }
+
+/* h5
+---------------------------------------------------------------------------------------------*/
+h5 {
+	font-size: 110%;
+	padding: 2px 10px;
+        margin: 2em 0 1em 0;
+	}
+
+h5 a:link,
+h5 a:active {
+	color: #134ec6;
+	text-decoration: none;
+	}
+
+h5 a:hover { color: #134ec6; text-decoration: underline; }
+h5 a:visited { color: #4976d1; text-decoration: none; }
+
+/* リスト
+============================================================================================ */
+/* 標準
+---------------------------------------------------------------------------------------------*/
+.textbox ul {
+	list-style: none;
+	margin: 1em 3% 1em 3%;
+	font-weight: normal;
+	}
+.textbox ul li {
+	margin-bottom: 0.4em;
+	list-style: url(../../images/list01.gif) outside;
+	}
+
+.textbox ol {
+	list-style-type: decimal;
+        margin: 1em 3% 1em 3%;
+	}
+.textbox ol li { margin-bottom: 0.4em; }
+
+.textbox ul.no-style{
+        list-style: none;
+        margin: 1em 3% 1em 3%;
+        font-weight: normal;
+        }
+.textbox ul.no-style li {
+        list-style: none;
+        margin-bottom: 0.4em;
+        }
+
+/* 標準 （太文字）
+---------------------------------------------------------------------------------------------*/
+.textbox ul.bold {
+        list-style: none;
+        margin: 1em 3% 1em 3%;
+        font-weight: bold;
+        }
+.textbox ul.bold li {
+        list-style: url(../../images/list01.gif) outside;
+        margin-bottom: 0.4em;
+        }
+.textbox ol.bold {
+        list-style-type: decimal;
+        margin: 1em 3% 1em 3%;
+        font-weight: bold;
+        }
+.textbox ol.bold li { margin-bottom: 0.4em; }
+
+.textbox ul.no-style-bold {
+        list-style: none;
+        margin: 1em 3% 1em 3%;
+        font-weight: bold;
+        }
+.textbox ul.no-style-bold li {
+        list-style: none;
+        margin-bottom: 0.4em;
+        }
+
+/* 目次 四角
+---------------------------------------------------------------------------------------------*/
+.textbox ul.square {
+        list-style: none;
+        margin: 1em 3% 1em 3%;
+        font-weight: bold;
+        }
+.textbox ul.square li{
+        list-style: url(../../images/icon02.gif)  outside;
+        margin-bottom: 0.4em;
+}
+
+.textbox ul.square_normal {
+        list-style: none;
+        margin: 1em 3% 1em 3%;
+        font-weight: normal;
+        }
+.textbox ul.square_normal li{
+        list-style: url(../../images/icon02.gif)  outside;
+        margin-bottom: 0.4em;
+}
+/*** 横並び ***/
+.textbox ul.square_level {
+        list-style: none;
+        margin: 1em 3% 1em 1%;
+        }
+.textbox ul.square_level li{
+        list-style: url(../../images/icon02.gif)  outside;
+        margin-bottom: 1em;
+margin-top: 1.5em;
+	float: left;
+	margin-left: 2.5em;
+	}
+
+/* 目次 三角
+---------------------------------------------------------------------------------------------*/
+.textbox ul.triangle {
+        list-style: none;
+        margin: 1em 3% 1em 3%;
+        font-weight: normal;
+        }
+.textbox ul.triangle li {
+        list-style: url(../../images/list_02.png)  outside;
+        margin-bottom: 0.4em;
+        }
+.textbox ul.d-triangle {
+        list-style: none;
+        margin: 1em 3% 1em 3%;
+        font-weight: normal;
+        }
+.textbox ul.d-triangle li {
+        list-style: url(../../images/list_02d.gif)  outside;
+        margin-bottom: 0.4em;
+        }
+
+.textbox ul.d-triangle ul li {
+        list-style: disc;
+        margin-bottom: 0.4em;
+        }
+
+/*** 横並び ***/
+.textbox ul.d-triangle_level {
+        list-style: none;
+        margin: 1em 3% 1em 1%;
+        }
+.textbox ul.d-triangle_level li{
+        list-style: url(../../images/list_02d.gif)  outside;
+        margin-bottom: 1em;
+	margin-top: 1.5em;
+        float: left;
+        margin-left: 2.5em;
+        }
+
+/* 定義型
+============================================================================================ */
+/* 標準
+---------------------------------------------------------------------------------------------*/
+.textbox dl { margin: 1.2em 0 2em 0; }
+.textbox dl dt {
+	font-weight: bold;
+	margin: 1em 0 0.5em 0;
+	}
+.textbox dl dd { margin: 0.5em 1em ; }
+
+/* 標準　全て太文字
+---------------------------------------------------------------------------------------------*/
+/*.textbox dl.bold {}
+.textbox dl.bold dt {}*/
+.textbox dl.bold dd {
+	font-weight: bold;
+	}
+
+/* 三角 */
+.textbox dl.triangle {}
+.textbox dl.triangle dt {
+	background: url(../../images/list_02.png)  no-repeat left center;
+	padding-left: 10px;
+	}
+
+/* ダブル三角 */
+.textbox dl.d-triangle {}
+.textbox dl.d-triangle dt {
+        background: url(../../images/list_02d.gif)  no-repeat left center;
+        padding-left: 10px;
+        }
+
+/* 番号 */
+.textbox dl.number {}
+.textbox dl.number dt {
+	display: list-item;
+	list-style-type: decimal;
+        margin-left: 10px;
+}
+
+/* dd にマーク
+---------------------------------------------------------------------------------------------*/
+/* 三角 */
+.textbox dl.sankaku {}
+.textbox dl.sankaku dt {}
+.textbox dl.sankaku dd {
+	background: url(../../images/list_02.png)  no-repeat left center;
+	padding-left: 10px;
+	}
+
+/* ドット */
+.textbox dl.dot {}
+.textbox dl.dot dt {}
+.textbox dl.dot dd {
+        background: url(../../images/list01.gif)  no-repeat left center;
+        padding-left: 10px;
+        }
+
+/* buttons for switching */
+.cs-buttons {
+	margin: -20px 0 0;
+	padding: 0;
+	font-size: 0;
+	float: left;
+	}
+
+.cs-buttons a {
+	margin: 0 2px;
+	width:20px;
+	height:20px;
+	float:left;
+	text-indent:-10000px;
+	background: url(../images/slide_p.png) no-repeat center center;
+	}
+
+.cs-buttons a.cs-active {
+	background-image: url(../images/slide_a.png);
+	}
+
+/* buttons Next and Prew */
+.cs-prev, .cs-next { visibility:hidden; }
+
+/* 段落
+ * ============================================================================================ */
+/* 左下げ
+ * ---------------------------------------------------------------------------------------------*/
+.textbox div.space_left {
+        margin-left: 5em;
+        }
+
+/* 文字
+ * ============================================================================================ */
+/* 装飾
+ * ---------------------------------------------------------------------------------------------*/
+.textbox span.font-bold {
+        font-weight: bold;
+        }
+.textbox div.font-bold {
+        font-weight: bold;
+        }
+
+/* 色
+ * ---------------------------------------------------------------------------------------------*/
+.textbox span.font-red {
+        color: red;
+        }
+.textbox div.font-red {
+        color: red;
+        }
+
+.textbox span.font-blue {        color: blue;
+        }
+.textbox div.font-blue {
+        color: blue;
+        }
+
+.textbox span.font-green {
+        color: green;
+        }
+.textbox div.font-green {
+        color: green;
+        }
+
+/* サイズ
+ * ---------------------------------------------------------------------------------------------*/
+.textbox span.font-size09 {
+	font-size: 0.9em;
+	}
+
+/* アイコン
+ * ---------------------------------------------------------------------------------------------*/
+.textbox span.icon_square {
+        background: url(../../images/icon02.gif)  no-repeat left center;
+        padding-left: 10px;
+        }
+
+.textbox span.icon_triangle {
+        background: url(../../images/list_02.png) no-repeat left center;
+        padding-left: 10px;
+        }
+
+.textbox span.icon_d-triangle {
+        background: url(../../images/list_02d.gif) no-repeat left center;
+        padding-left: 10px;
+        }
+
+/* スペース
+ * ---------------------------------------------------------------------------------------------*/
+span.horizontal-space_1{
+	margin-right: 1em;
+	}
+
+span.horizontal-space_05{
+        margin-right: 0.5em;
+        }
+
+/* =旧CSS
+ *  * -------------------------------------------------------------- */
+
+/*----------------------------------------------------------------------------------
+ *  *    contents02.css
+ *   *    -----------------------------------------------------------------------------------*/
+/*============目次(次階層コンテンツエリア)===========
+ *  *
+ *   * 最終更新日：2008/6/6
+ *    *
+ *      * 2:  #main
+ *        * 8:  dl
+ *         * 9:  table
+ *          * 10: #box04
+ *           * 11: box07(list float/1column用)(###　削除 2011.04.12 by Kimiko Suzuki###)
+ *            * 12: flatfile(flatfile用)
+ *             * 13: result_log(公開サービスresult用)
+ *              * 14: mag (added by JK at 080314)
+ *               * 15: DDBJing (added by JK at 080409)
+ *                * 16: table for breakdown_stats (added by JK at 080415, 080519)
+ *                 * 17: Monthly DDBJ Topic (added by JK at 080606
+ *                  * )============================*/
+
+/*========================
+ *  *  ■9: br.blockend
+ *   *    ========================*/
+br.blockend {
+        clear:both;
+        font-size:1px;
+}
+
+/*  (added by JK on 080314 for mailmagazine)
+ *   *      (added by JK on 080807 for mailmagazine)
+ *    *          (added by JK on 090126 for mailmagazine) */
+/* ========================
+ *  *  ■ 15.DDBJing
+ *   *   ========================*/
+/* == 講習会後アンケート用 === */
+table#enquete {
+        width:800px;
+        border:solid 3px ;
+        background-color: #FF6600;
+        border-collapse: collapse;
+}
+
+h3#ddbjing {
+        font-size:110%;
+	font-weight:bold;
+        padding-left:15px;
+        background: url(../../images/icon02.gif) no-repeat center left;
+margin-bottom;50px;
+}
+
+
+.table_ddbjing_01{
+		width: 600px;
+		margin-left:20px;
+		border: solid  1px #000099;
+}
+
+.table_ddbjing_02
+      {
+                font-size: 100%;
+                table-layout: auto;
+                border: solid  1px #999999;
+                border-collapse: collapse;
+                margin: 10px 30px 10px 30px;
+}
+
+/*  (added by JK on 080805 for hot topics)*/
+.table_ddbjing_02wide
+      {
+                width: 720px;
+                font-size: 80%;
+                table-layout: auto;
+                border: solid  1px #999999;
+                border-collapse: collapse;
+                margin: 10px 30px 10px 30px;
+}
+
+
+.th_ddbjing
+      {
+        border:solid 0px #ffffff;
+        padding:10px;
+        text-align:left;
+}
+
+.td_ddbjing_01
+      {
+        border:solid 0px #ffffff;
+        padding:5px;
+        margin: 10px;
+}
+
+
+
+
+.td_ddbjing_02
+      {
+        border:solid 1px #999999;
+        padding:5px 10px 5px 5px;
+        margin: 10px;
+}
+
+
+.td_ddbjing_03
+      {
+        border:solid 1px #333333;
+        padding:5px 10px 5px 5px;
+        margin: 10px;
+}
+
+.td_ddbjing_04
+      {
+        border:solid 1px #999999;
+        padding:5px;
+        margin: 10px;
+        text-align: center;
+}
+.sotowaku {
+                border: 1px solid #000099;
+                padding: 5px;
+                text-align: left
+}
+
+
+
+
+ /*========================
+ *  *  ■ 16. table for breakdown_stats
+ *   *   ========================*/
+
+
+.table_bs {
+       width:650px;
+        border: solid 3px #d2d2d2;
+        font-size:20%;
+        border-collapse:collapse;
+        margin-left:30px;
+}
+
+.table_bs_nu {
+	width:400px;
+	border: solid 3px #d2d2d2;
+}
+
+
+.th_bs {
+        width:150px;
+        border:solid 1px #d2d2d2;
+        padding:10px;
+        text-align:center;
+        background-color: #b0c4DE
+}
+
+
+.th_bs_ddbj {
+        width:150px;
+        border:solid 1px #d2d2d2;
+        padding:10px;
+        text-align:center;
+        background-color: #ffc594;
+}
+/* changed by JK at 20100223 from #ffcccc to #ffc594*/
+
+.th_bs_embl {
+       width:150px;
+        border:solid 1px #d2d2d2;
+        padding:10px;
+        text-align:center;
+        background-color: #5fb4a0
+}
+/* changed by JK at 20100223 from #ccff99 to #5fb4a0*/
+
+.th_bs_gb {
+        width:150px;
+        border:solid 1px #d2d2d2;
+        padding:10px;
+        text-align:center;
+        background-color: #528cde;
+}
+/* changed by JK at 20100223 from #6699cc to #528cde*/
+
+.td_bs_c{
+font-size:100%;
+        border:solid 1px #d2d2d2;
+/*        padding:3px 1px;*/
+        text-align: center;
+}
+
+.td_bs_c_b{
+font-size:100%;
+        border:solid 1px #d2d2d2;
+/*        padding:3px 5px;*/
+        text-align: center;
+        background-color: #E0FFFF;
+
+}
+
+
+.td_bs_l_b{
+        border:solid 1px #d2d2d2;
+        padding:3px 5px;
+        text-align: left;
+        background-color: #E0FFFF;
+}
+
+
+
+ /*================================================
+ *  *  ■ 統計ページ --- by Kimiko Suzuki (11.11.29)
+ *   *      ・DDBJ Database Release History	(style=1)
+ *    *          ・Journal ranking					(style=2)
+ *     *              ・Numbers of data submitted to DDBJ(style=3)
+ *      *                  ・WGS released data				(style=4)
+ *       *                  プログラム名：bs_table
+ *        *                   ================================================*/
+.td_bs_r_b{
+        border:solid 1px #d2d2d2;
+        padding:3px 1px;
+        text-align: right;
+        background-color: #E0FFFF;
+}
+.td_bs_r {
+        border:solid 1px #d2d2d2;
+        padding:3px 5px;
+        text-align: right;
+}
+.td_bs_l{
+        border:solid 1px #d2d2d2;
+        padding:3px 5px;
+        text-align: left;
+}
+ /*================================================
+ *  *  ■ DDBJ リリース　統計ページ  --- by Kimiko Suzuki (11.11.29)
+ *   *      ・国際塩基配列データベースにおけるエントリ数の割合
+ *    *          ・国際塩基配列データベースにおける塩基数の割合
+ *     *          プログラム名：DDBJ_release_table
+ *      *           ================================================*/
+table#bs_nu {
+        width: 800px;
+        border: solid 1px #d2d2d2;
+        font-size:100%;
+        border-collapse:collapse;
+        margin-left:0px;
+        table-layout: auto;
+}
+
+.th_bs {
+        width:150px;
+        border:solid 1px #d2d2d2;
+        padding:10px;
+        text-align:center;
+        background-color: #b0c4DE;
+}
+
+
+.th_bs_ddbj {
+        width:150px;
+        border:solid 1px #d2d2d2;
+        padding:10px;
+        text-align:center;
+        background-color: #ffc594;
+}
+/* changed by JK at 20100223 from #ffcccc to #ffc594*/
+
+.th_bs_embl {
+       width:150px;
+        border:solid 1px #d2d2d2;
+        padding:10px;
+        text-align:center;
+        background-color: #5fb4a0
+}
+/* changed by JK at 20100223 from #ccff99 to #5fb4a0*/
+
+.th_bs_gb {
+        width:150px;
+        border:solid 1px #d2d2d2;
+        padding:10px;
+        text-align:center;
+        background-color: #528cde;
+}
+/* changed by JK at 20100223 from #6699cc to #528cde*/
+
+tr td#bs_c_b{
+		font-size:100%;
+        	border:solid 1px #d2d2d2;
+		padding-left:1px;
+		padding-right:1px;
+        	text-align: center;
+        	background-color: #E0FFFF;
+}
+
+tr td#bs_c{
+		font-size:100%;
+        	border:solid 1px #d2d2d2;
+		padding-left:1px;
+		padding-right:1px;
+             	 text-align: center;
+}
+
+ /*================================================================
+ *  *  ■ テーブル作成用プラグイン…make_table.php --- by Kimiko Suzuki (11.10.19)
+ *   *   ================================================================*/
+table#mktable {
+	table-layout: auto;
+        border: solid  1px #999999;
+        border-collapse: collapse;
+        margin-left:20px;
+}
+table#mktable_noline {   /* 罫線なし*/
+	table-layout: auto;
+        border:solid 0px #999999;
+        border-collapse: collapse;
+        margin-left:10px;
+}
+
+tr td#mktable_title  /* 表題  */
+      {
+        border:solid 1px #999999;
+        background-color: #ccddee;
+        text-align:center;
+/*        font-weight:bold;ユーザーが設定できる様に変更 (2012.10.12) */
+}
+tr td#mktable_title_noline  /* 表題  罫線なし*/
+      {
+        border:solid 0px #999999;
+        background-color: #ccddee;
+        text-align:center;
+/*        font-weight:bold;ユーザーが設定できる様に変更 (2012.10.12) */
+}
+
+tr td#mktable_center  /*  項目…センタリング */
+      {
+        border:solid 1px #999999;
+        text-align:center;
+}
+tr td#mktable_center_noline  /*  項目…センタリング 罫線なし*/
+      {
+        border:solid 0px #999999;
+        text-align:center;
+}
+
+tr td#mktable_left  /* 項目…左詰め */
+      {
+        border:solid 1px #999999;
+}
+tr td#mktable_left_noline  /* 項目…左詰め 罫線なし*/
+      {
+        border:solid 0px #999999;
+}
+
+
+/* == ショートコード css ここまで === */
+
+ /*============================================================
+ *  *  ■ 投稿用css --- by Kimiko Suzuki (11.12.22)
+ *   *   ============================================================*/
+ /* 等幅フォント　背景白*/
+pre#log {
+       font-family:  "ＭＳ ゴシック",Courier,monospace;
+        font-size:10pt;
+        line-height:10pt;
+        white-space: pre;
+        margin-top:-10px;
+        padding-top:5px;
+        padding-bottom:5px;
+        padding-left:15px;
+        background-color: white;
+}
+h6 {
+        background:url(../../images/faq_q.gif) no-repeat center left;
+        font-size: 100%;
+        padding : 5px 8px 0px 30px;
+        text-decoration:underline;
+        cursor:pointer;
+}
+p.faq{
+	margin : 10px 20px 0 20px;
+        padding : 5px 8px 0px 30px;
+	font-size : 100%;
+}
+p.faq_ans{
+        background:url(../../images/faq_a.gif) no-repeat top left;
+	margin : 10px 20px 0 20px;
+        padding : 5px 8px 0px 30px;
+	font-size : 100%;
+}
+p.faq_number {
+/*	margin : -10px 25px 0 0;*/
+/*	float: right;*/
+	margin: 0 0 11px 78%;
+
+	font-size:x-small;
+}
+p.faq_small {
+        margin: 0 0 0 70px;
+        font-size:10px;
+}
+hr.faq{
+        width:100%;
+}
+dl.faq{
+        margin:0 20px 0 50px;
+}
+dl.faq_title{
+        margin: 20px 0 10px 10px;
+}
+.faq_list {
+	margin-left: 2%;
+	}
+ /*================================================================
+ *  *  ■ スパコンリプレースに伴うサービス停止お知らせ用赤枠　　by Junko Kohira(12.02.06)
+ ================================================================*/
+/*#notice_2{
+                text-align: left;
+                text-decoration:none;
+                padding: 10px ;
+                margin: 20px 200px 20px 20px;
+                 background-color: #cceaff;
+*/　　　　　　/*border: solid 1px #ff0000;*/
+/*             }
+*/
+
+ /*================================================================
+ *  *  ■ 階層をつけたリスト表示　　by Junko Kohira(12.02.03)
+ *   *   ================================================================*/
+#list_l1{
+                text-align: left;
+                text-decoration:none;
+                padding: 1px 3px 1px 5px;
+                margin: 0px 100px 0px 20px;
+             }
+
+#list_l1p{
+                text-align: left;
+                text-decoration:none;
+                padding: 1px 3px 1px 5px;
+                margin: 0px 50px 0px 20px;
+                background-color:#f8D4E6;
+          }
+
+#list_l2{
+                text-align: left;
+                text-decoration:none;
+                padding: 1px 3px 1px 5px;
+                margin: 0px 20px 0px 50px;
+           }
+
+#list_l3{
+                text-align: left;
+                text-decoration:none;
+                padding: 1px 3px 1px 5px;
+                margin: 0px 20px 0px 80px;
+           }
+#list_l4{
+                text-align: left;
+                text-decoration:none;
+                padding: 1px 3px 1px 5px;
+                margin: 0px 20px 0px 85px;
+           }
+
+ /*================================================================
+ *  *  ■ 新登録システム　ヘルプページ用　　by Kimiko Suzuki (12.10.10)
+ *   *   ================================================================*/
+/* Page Top */
+.totop{
+    position: fixed;
+    bottom: 30px;
+    right: 30px;
+    z-index: 2000;
+}
+.totop a{
+    display: block;
+    width: 90px;
+    height: 27px;
+    text-indent: -1000em;
+    overflow: hidden;
+    background: url(../../images/pagetop.png) 0 0 no-repeat;
+}
+.totop a:hover{
+    background-position: 0 0;
+}
+
+/* =旧CSS ここまで
+ *  *-------------------------------------------------------------- */
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+/* 特定のページ用CSS
+ * ============================================================================================ */
+/* cloud とは
+-------------------------------------------------------------- */
+table.cloud{
+        margin-left:2em;
+        width:600px;
+        border:solid 1px #000000;
+}
+table.cloud td.c_purple {
+        padding-left:10px;
+        padding-right:10px;
+        background-color:#ccccff;
+        border:solid 1px #000000;
+}
+table.cloud td.c_green {
+        padding-left:10px;
+        padding-right:10px;
+        background-color:#708090;
+        border:solid 1px #000000;
+}
+table.cloud td.c_yellow {
+        padding-left:10px;
+        padding-right:10px;
+        background-color:#ffd700;
+        border:solid 1px #000000;
+}
+table.cloud td.c_white {
+        padding-left:10px;
+        padding-right:10px;
+        border:solid 1px #000000;
+}
+table.cloud td.c_gray {
+        padding-left:10px;
+        padding-right:10px;
+        background-color:#cccccc;
+        border:solid 1px #000000;
+}
+/* Web Magazine
+ * ============================================================================================ */
+/* バックナンバー
+ * -------------------------------------------------------------------------------------------- */
+.textbox dl.archive dt {
+        font-size: 1.3em;
+        }
+/* メルマガ本文
+ * -------------------------------------------------------------------------------------------- */
+.mag_midashi_title{
+        background:url(../../images/magicon.gif) no-repeat center left;
+        background-color:#99cccc;
+        color: #333333 ;
+        font-size:100%;
+        font-weight:bold;
+        padding: 2px 3px 2px 25px;
+        margin: 0px 0px 0px 0px;
+        width: auto;
+        }
+.mag_honbun_waku{
+        border: 3px solid #99cccc;
+        padding: 10px 25px 10px 10px;
+        text-align: left;
+        margin: 0px 0px 0px 0px;
+        width:auto;
+        }
+
+
+
+/* DDBJing 講習会のお知らせ
+-------------------------------------------------------------- */
+/* 講習会の概要 */
+.ddbjing_01{
+        width: 95%;
+        border: solid  1px #000099;
+	}
+.ddbjing_01 td{
+	width: auto;
+        border: solid  0px #ffffff;
+        padding-right:0px;
+	}
+.ddbjing_01 td:first-child {
+	width: 50px;
+	}
+
+/* 日程表 */
+.ddbjing_02 {
+        width: 98%;
+        table-layout: auto;
+        border: solid  1px #999999;
+        border-collapse: collapse;
+        margin:0px 0 0 10px;
+}
+
+.ddbjing_02 td.date
+      {
+        border:solid 1px #999999;
+        background-color: #ccffcc;
+        text-align:center;
+        font-weight:bold;
+}
+
+.ddbjing_02 td.item
+      {
+        border:solid 1px #999999;
+        text-align:center;
+}
+
+.ddbjing_02 td.break
+      {
+        border:solid 1px #999999;
+        background-color: #ccffff;
+}
+
+.ddbjing_02 td.lecturer
+      {
+        border:solid 1px #999999;
+}
+
+.ddbjing_02 td.title
+      {
+        border:solid 1px #999999;
+        background-color: #ffff99;
+}
+
+/** DDBJing 講習会資料ダウンロード / 過去の講習会 一覧 **/
+.list_l1b{
+        width:80%;
+        text-align: center;
+        text-decoration:none;
+        padding: 1px 3px 1px 5px;
+        margin: 0px 50px 0px 20px;
+        background-color:#a8def0;
+        }
+.list_l1p{
+        width:80%;
+        text-align: left;
+        text-decoration:none;
+        padding: 1px 3px 1px 5px;
+        margin: 5px 50px 0px 20px;
+        background-color:#ffffcc;
+        }
+.list_l1w{
+        width:80%;
+        text-align: left;
+        text-decoration:none;
+        padding: 1px 3px 1px 5px;
+        margin: 5px 50px 0px 20px;
+        }
+.list_l1c{
+        width:80%;
+        text-align: center;
+        text-decoration:none;
+        padding: 1px 3px 1px 5px;
+        margin: 0px 50px 0px 20px;
+        }
+
+/** お問い合わせ・DDBJing 講習会申し込み用 **/
+/* お問い合わせ */
+#gmap{
+	margin: 0 1%;
+        width: 50%;
+        height: 500px;
+	}
+/* What's new Archive
+---------------------------------------------------------------------------------------------*/
+div.wna_title{
+	background:url(../../images/mix09010502.gif) no-repeat center left;
+        font-size:100%;
+        font-weight:bold;
+	padding-left:15px ;
+        margin: 0 0 1em 1em;
+	}
+div.wna_contents{
+        font-size: 100%;
+	margin: 0 2em 2em 2em;
+	}
+span.wna_date {
+        font-weight:normal;
+	}
+
+/* DDBJリリースにおける division とbank の割合
+        http://www.ddbj.nig.ac.jp/breakdown_stats/div-bank_ent-e.html
+	http://www.ddbj.nig.ac.jp/breakdown_stats/div-bank_bp-e.html
+---------------------------------------------------------------------------------------------*/
+table.statistics01 {
+        width: auto;
+        margin: 0em 0em;
+min-width: 800px;
+        }
+table.statistics01 th{
+        border:solid 1px #d2d2d2;
+        padding:10px;
+        text-align:center;
+        width: auto;
+        }
+table.statistics01 tr:first-child th:first-child,
+table.statistics01 th:last-child,
+table.statistics01 tr:nth-child(2) th:nth-child(7){
+        background-color: #c9c0bb ;
+        }
+table.statistics01 tr:first-child th:nth-child(2),
+table.statistics01 tr:nth-child(2) th:nth-child(2),
+table.statistics01 tr:nth-child(2) th:first-child {
+        background-color: #ffa843;
+        }
+table.statistics01 tr:first-child th:nth-child(3),
+table.statistics01 tr:nth-child(2) th:nth-child(3),
+table.statistics01 tr:nth-child(2) th:nth-child(4){
+        background-color: #5fb4a0;
+        }
+table.statistics01 tr:first-child th:nth-child(4),
+table.statistics01 tr:nth-child(2) th:nth-child(5),
+table.statistics01 tr:nth-child(2) th:nth-child(6){
+        background-color: #528cde;
+        }
+table.statistics01 td{
+        font-size: 100%;
+        border: solid 1px #d2d2d2;
+        padding-left: 1px;
+        padding-right: 1px;
+        text-align: center;
+        }
+table.statistics01 tr:nth-child(even){
+        background-color: #f3f4f5;
+        }
+
+/* 国際塩基配列データベースにおけるエントリ数/塩基数の割合
+ 	http://www.ddbj.nig.ac.jp/breakdown_stats/prop_ent.html
+ 	http://www.ddbj.nig.ac.jp/breakdown_stats/prop_bp.htm
+---------------------------------------------------------------------------------------------*/
+table.statistics02 {
+        width: auto;
+        margin: 0em 0em;
+	}
+table.statistics02 th{
+        border:solid 1px #d2d2d2;
+        padding:10px;
+        text-align:center;
+	width: 10%;
+        }
+
+table.statistics02 th:nth-child(-n+8){
+        background-color: #528cde;
+	}
+table.statistics02 th:nth-child(-n+6){
+        background-color: #5fb4a0;
+	}
+table.statistics02 th:nth-child(-n+4){
+        background-color: #ffa843;
+	}
+table.statistics02 th:first-child,
+table.statistics02 th:last-child{
+	width: 15%;
+        background-color: #c9c0bb ;
+	}
+table.statistics02 td{
+	font-size: 100%;
+        border: solid 1px #d2d2d2;
+	padding-left: 1px;
+	padding-right: 1px;
+        text-align: center;
+	}
+table.statistics02 tr:nth-child(4n+2),
+table.statistics02 tr:nth-child(4n+3){
+	background-color: #f3f4f5;
+	}
+
+
+<!-- 2013.06.13 added by JK for WABI_BLAST "scm.css" -->
+table.revision-info td {
+    margin:  0px;
+    padding: 0px;
+}
+
+div.revision-graph { position: absolute; min-width: 1px; }
+
+div.changeset-changes ul { margin: 0; padding: 0; }
+div.changeset-changes ul > ul { margin-left: 18px; padding: 0; }
+
+li.change {
+    list-style-type:none;
+    background-image: url(../images/bullet_black.png);
+    background-position: 1px 1px;
+    background-repeat: no-repeat;
+    padding-top: 1px;
+    padding-bottom: 1px;
+    padding-left: 20px;
+    margin: 0;
+}
+li.change.folder { background-image: url(../images/folder_open.png); }
+li.change.folder.change-A { background-image: url(../images/folder_open_add.png); }
+li.change.folder.change-M { background-image: url(../images/folder_open_orange.png); }
+li.change.change-A { background-image: url(../images/bullet_add.png); }
+li.change.change-M { background-image: url(../images/bullet_orange.png); }
+li.change.change-C { background-image: url(../images/bullet_blue.png); }
+li.change.change-R { background-image: url(../images/bullet_purple.png); }
+li.change.change-D { background-image: url(../images/bullet_delete.png); }
+
+li.change .copied-from { font-style: italic; color: #999; font-size: 0.9em; }
+li.change .copied-from:before { content: " - "}
+
+#changes-legend { float: right; font-size: 0.8em; margin: 0; }
+#changes-legend li { float: left; background-position: 5px 0; }
+
+table.filecontent { border: 1px solid #ccc;  border-collapse: collapse; width:98%; background-color: #fafafa; }
+table.filecontent th { border: 1px solid #ccc; background-color: #eee; }
+table.filecontent th.filename { background-color: #e4e4d4; text-align: left; padding: 0.2em;}
+table.filecontent tr.spacing th { text-align:center; }
+table.filecontent tr.spacing td { height: 0.4em; background: #EAF2F5;}
+table.filecontent th.line-num {
+    border: 1px solid #d7d7d7;
+    font-size: 0.8em;
+    text-align: right;
+    width: 2%;
+    padding-right: 3px;
+    color: #999;
+    user-select: none;
+    -moz-user-select: none;
+    -o-user-select: none;
+    -ms-user-select: none;
+    -webkit-user-select: none;
+}
+table.filecontent th.line-num a {
+    text-decoration: none;
+    color: inherit;
+}
+table.filecontent td.line-code pre {
+    margin: 0px;
+    white-space: pre-wrap;
+}
+
+/* 12 different colors for the annonate view */
+table.annotate tr.bloc-0 {background: #FFFFBF;}
+table.annotate tr.bloc-1 {background: #EABFFF;}
+table.annotate tr.bloc-2 {background: #BFFFFF;}
+table.annotate tr.bloc-3 {background: #FFD9BF;}
+table.annotate tr.bloc-4 {background: #E6FFBF;}
+table.annotate tr.bloc-5 {background: #BFCFFF;}
+table.annotate tr.bloc-6 {background: #FFBFEF;}
+table.annotate tr.bloc-7 {background: #FFE6BF;}
+table.annotate tr.bloc-8 {background: #FFE680;}
+table.annotate tr.bloc-9 {background: #AA80FF;}
+table.annotate tr.bloc-10 {background: #FFBFDC;}
+table.annotate tr.bloc-11 {background: #BFE4FF;}
+
+table.annotate td.revision {
+    text-align: center;
+    width: 2%;
+    padding-left: 1em;
+    background: inherit;
+}
+
+table.annotate td.author {
+    text-align: center;
+    border-right: 1px solid #d7d7d7;
+    white-space: nowrap;
+    padding-left: 1em;
+    padding-right: 1em;
+    width: 3%;
+    background: inherit;
+    font-size: 90%;
+}
+
+table.annotate td.line-code { background-color: #fafafa; }
+
+div.action_M { background: #fd8 }
+div.action_D { background: #f88 }
+div.action_A { background: #bfb }
+
+/************* CodeRay styles *************/
+.syntaxhl div {display: inline;}
+
+
+.syntaxhl .line-numbers {
+    padding: 2px 4px 2px 4px; background-color: #eee; margin:0px 5px 0px 0px;
+    user-select: none;
+    -moz-user-select: none;
+    -o-user-select: none;
+    -ms-user-select: none;
+    -webkit-user-select: none;
+}
+.syntaxhl .code pre { overflow: auto }
+.syntaxhl .debug { color: white !important; background: blue !important; }
+
+.syntaxhl .annotation { color:#007 }
+.syntaxhl .attribute-name { color:#b48 }
+.syntaxhl .attribute-value { color:#700 }
+.syntaxhl .binary { color:#509 }
+.syntaxhl .char .content { color:#D20 }
+.syntaxhl .char .delimiter { color:#710 }
+.syntaxhl .char { color:#D20 }
+.syntaxhl .class { color:#B06; font-weight:bold }
+.syntaxhl .class-variable { color:#369 }
+.syntaxhl .color { color:#0A0 }
+.syntaxhl .comment { color:#777 }
+.syntaxhl .comment .char { color:#444 }
+.syntaxhl .comment .delimiter { color:#444 }
+.syntaxhl .complex { color:#A08 }
+.syntaxhl .constant { color:#036; font-weight:bold }
+.syntaxhl .decorator { color:#B0B }
+.syntaxhl .definition { color:#099; font-weight:bold }
+.syntaxhl .delimiter { color:black }
+.syntaxhl .directive { color:#088; font-weight:bold }
+.syntaxhl .doc { color:#970 }
+.syntaxhl .doc-string { color:#D42; font-weight:bold }
+.syntaxhl .doctype { color:#34b }
+.syntaxhl .entity { color:#800; font-weight:bold }
+.syntaxhl .error { color:#F00; background-color:#FAA }
+.syntaxhl .escape  { color:#666 }
+.syntaxhl .exception { color:#C00; font-weight:bold }
+.syntaxhl .float { color:#60E }
+.syntaxhl .function { color:#06B; font-weight:bold }
+.syntaxhl .global-variable { color:#d70 }
+.syntaxhl .hex { color:#02b }
+.syntaxhl .imaginary { color:#f00 }
+.syntaxhl .include { color:#B44; font-weight:bold }
+.syntaxhl .inline { background-color: hsla(0,0%,0%,0.07); color: black }
+.syntaxhl .inline-delimiter { font-weight: bold; color: #666 }
+.syntaxhl .instance-variable { color:#33B }
+.syntaxhl .integer  { color:#00D }
+.syntaxhl .key .char { color: #60f }
+.syntaxhl .key .delimiter { color: #404 }
+.syntaxhl .key { color: #606 }
+.syntaxhl .keyword { color:#080; font-weight:bold }
+.syntaxhl .label { color:#970; font-weight:bold }
+.syntaxhl .local-variable { color:#963 }
+.syntaxhl .namespace { color:#707; font-weight:bold }
+.syntaxhl .octal { color:#40E }
+.syntaxhl .operator { }
+.syntaxhl .predefined { color:#369; font-weight:bold }
+.syntaxhl .predefined-constant { color:#069 }
+.syntaxhl .predefined-type { color:#0a5; font-weight:bold }
+.syntaxhl .preprocessor { color:#579 }
+.syntaxhl .pseudo-class { color:#00C; font-weight:bold }
+.syntaxhl .regexp .content { color:#808 }
+.syntaxhl .regexp .delimiter { color:#404 }
+.syntaxhl .regexp .modifier { color:#C2C }
+.syntaxhl .regexp { background-color:hsla(300,100%,50%,0.06); }
+.syntaxhl .reserved { color:#080; font-weight:bold }
+.syntaxhl .shell .content { color:#2B2 }
+.syntaxhl .shell .delimiter { color:#161 }
+.syntaxhl .shell { background-color:hsla(120,100%,50%,0.06); }
+.syntaxhl .string .char { color: #b0b }
+.syntaxhl .string .content { color: #D20 }
+.syntaxhl .string .delimiter { color: #710 }
+.syntaxhl .string .modifier { color: #E40 }
+.syntaxhl .string { background-color:hsla(0,100%,50%,0.05); }
+.syntaxhl .symbol .content { color:#A60 }
+.syntaxhl .symbol .delimiter { color:#630 }
+.syntaxhl .symbol { color:#A60 }
+.syntaxhl .tag { color:#070 }
+.syntaxhl .type { color:#339; font-weight:bold }
+.syntaxhl .value { color: #088; }
+.syntaxhl .variable  { color:#037 }
+
+.syntaxhl .insert { background: hsla(120,100%,50%,0.12) }
+.syntaxhl .delete { background: hsla(0,100%,50%,0.12) }
+.syntaxhl .change { color: #bbf; background: #007; }
+.syntaxhl .head { color: #f8f; background: #505 }
+.syntaxhl .head .filename { color: white; }
+
+.syntaxhl .delete .eyecatcher { background-color: hsla(0,100%,50%,0.2); border: 1px solid hsla(0,100%,45%,0.5); margin: -1px; border-bottom: none; border-top-left-radius: 5px; border-top-right-radius: 5px; }
+.syntaxhl .insert .eyecatcher { background-color: hsla(120,100%,50%,0.2); border: 1px solid hsla(120,100%,25%,0.5); margin: -1px; border-top: none; border-bottom-left-radius: 5px; border-bottom-right-radius: 5px; }
+
+.syntaxhl .insert .insert { color: #0c0; background:transparent; font-weight:bold }
+.syntaxhl .delete .delete { color: #c00; background:transparent; font-weight:bold }
+.syntaxhl .change .change { color: #88f }
+.syntaxhl .head .head { color: #f4f }
+
+
+
+/** 2013.06.24 added by JK application.css より　開発者項目非表示設定 **/
+
+.devnote {
+  display:none;
+}
+
+/**　コード表示の背景。　t-www では　<pre>タグが有効だったが www では効かないのでここで設定。flatfile とかぶらないように設定したつもり**/
+pre.pre {
+	background: #eee;
+        color: #222;
+        font-size: 12px;
+        line-height: 18px;
+        margin: 0 0 20px 2%;
+        padding: 1.5em;
+}
+
+/** 2013.06.27 added by JK for sitemap **/
+
+.h2sm {
+	width: 700px;
+background: url(../../images/list_h2sm.gif) no-repeat left center;
+	position: relative;
+	display: inline-block;
+	font-size: 95%;
+	padding:8px 20px 8px 10px;
+	border-top: 2px solid #ff8901;
+	border-bottom: 1px solid #d0d0d0;
+	margin-top: 0.5em;
+	margin-bottom: 0.5em;
+                   margin-right: 0px;
+	letter-spacing: 0.1em;
+	}
+
+
+.h3sm {
+	width: 698px;
+background: url(../../images/list_04.png) no-repeat left center;
+	font-size: 90%;
+	padding: 0.2em 0 0.2em 1.2em;
+	background-color: #d0d0d0;
+	margin: 0.25em 0 0.25em 20px;
+	border-radius: 2px;
+	-webkit-border-radius: 2px;
+	-moz-border-radius: 2px;
+	behavior: url("../PIE/PIE.htc");
+	}
+
+.h4sm {
+	width: 675px;
+background: url(../../images/list_03.png) no-repeat left center;
+	font-size: 90%;
+	padding: 0.5em 0 0.2em 1.2em;
+	border-bottom: solid 1px #d0d0d0;
+	margin: 0.2em 0 0 40px;
+	}
+
+.h6sm {
+	width: 700px;
+                   background: url(../../images/list_02d.gif) no-repeat left center;
+	font-size: 90%;
+	padding: 0px 10px 0  12px;
+	margin: 0.5em 0 0 65px;
+	}
+
+.h7sm {
+	width: 700px;
+                   background: url(../../images/list_02.png) no-repeat left center;
+	font-size: 90%;
+	padding: 0px 10px 0  8px;
+	margin: 0.5em 0 0 85px;
+	}
+
+
+h8      {background: url(../../images/tri01.gif) no-repeat left center;
+       }
+
+.h8sm {
+	width: 580px;
+background: url(../../images/tri01.gif) no-repeat left center;
+	font-size: 88%;
+	padding: 0.2em 0 0.2em 1.2em;
+	margin: 0.25em 0 0.25em 20px;
+	border-radius: 2px;
+	-webkit-border-radius: 2px;
+	-moz-border-radius: 2px;
+	behavior: url("../PIE/PIE.htc");
+	}
+
+/** サイトマップここまで　 **/
+
+/* 標準 CSS
+============================================================================================ */
+/* ページレイアウト
+-------------------------------------------------------------- */
+/* ページ全体の段組み　２段 */
+#mainbox{
+        width: auto;
+	margin: 0 auto;
+        }
+
+#main_l {
+	width: 48%;
+        float: left;
+	margin-right: 4%;
+	}
+#main_r {
+	width: 48%;
+        float: left;
+
+}
+#main_l dl dt,
+#main_r dl dt {
+	margin: 0.5em 0 ;
+	}
+/* リストの段組み ２段*/
+.mainbox {
+        width: auto;
+        margin: 0 auto;
+        }
+.box_l {
+        width:40%;
+        float:left;
+        font-size:100%;
+        padding:0 2% 10px 5%;
+}
+.box_l ul {
+        list-style: none;
+        margin-left: 1em;
+        margin-top: 1em;
+        font-weight: bold;
+        }
+
+.box_l ul li{
+        list-style: url(../../images/list01.gif) outside;
+}
+
+.box_r {
+        width:40%;
+        float:left;
+        font-size:100%;
+        padding:0 5% 10px 2%;
+}
+.box_r ul {
+        list-style: none;
+        margin-left: 1em;
+        margin-top: 1em;
+        font-weight: bold;
+        }
+
+.box_r li{
+        list-style: url(../../images/list01.gif) outside;
+}
+.boxclear {
+	clear: left;
+}
+.clearfix:after {
+  content: ".";
+  display: block;
+  height: 0;
+  clear: both;
+  visibility: hidden;
+}
+
+.clearfix { display: inline-table; }
+
+/* Hides from IE-mac \*/
+* html .clearfix { height: 1%; }
+.clearfix { display: block; }
+/* End hide from IE-mac */
+
+
+/* リストの段組み 3段*/
+.box3_l {
+        width:30%;
+        float:left;
+        font-size:100%;
+margin-left: 3%;
+        padding:0 0px;
+}
+.box3_l ul {
+        list-style: none;
+        margin-left: 1em;
+        margin-top: 1em;
+        font-weight: bold;
+        }
+.box3_l ul li{
+        list-style: none;
+}
+.box3_c {
+        width:30%;
+        float:left;
+        font-size:100%;
+        padding:0 1%;
+}
+.box3_c ul {
+        list-style: none;
+        margin-left: 1em;
+        margin-top: 1em;
+        font-weight: bold;
+        }
+
+.box3_c ul li{
+        list-style: none;
+}
+
+.box3_r {
+        width:30%;
+        float:left;
+        font-size:100%;
+        padding:0 1%;
+}
+.box3_r ul {
+        list-style: none;
+        margin-left: 1em;
+        margin-top: 1em;
+        font-weight: bold;
+        }
+
+.box3_r ul li{
+        list-style: none;
+}
+/* リストの段組み 4段*/
+.box4_1 {
+        width:20%;
+        float:left;
+        font-size:100%;
+margin-left: 3%;
+        padding:0 0px;
+}
+.box4_1 ul {
+        list-style: none;
+        margin-left: 1em;
+        margin-top: 1em;
+        font-weight: bold;
+        }
+.box4_1 ul li{
+        list-style: none;
+}
+.box4_2 {
+        width:20%;
+        float:left;
+        font-size:100%;
+        padding:0 1%;
+}
+.box4_2 ul {
+        list-style: none;
+        margin-left: 1em;
+        margin-top: 1em;
+        font-weight: bold;
+        }
+
+.box4_2 ul li{
+        list-style: none;
+}
+
+.box4_3 {
+        width:20%;
+        float:left;
+        font-size:100%;
+        padding:0 1%;
+}
+.box4_3 ul {
+        list-style: none;
+        margin-left: 1em;
+        margin-top: 1em;
+        font-weight: bold;
+        }
+
+.box4_3 ul li{
+        list-style: none;
+}
+.box4_4 {
+        width:20%;
+        float:left;
+        font-size:100%;
+        padding:0 1%;
+}
+.box4_4 ul {
+        list-style: none;
+        margin-left: 1em;
+        margin-top: 1em;
+        font-weight: bold;
+        }
+
+.box4_4 ul li{
+        list-style: none;
+}
+
+/* 右寄せ　左寄せ
+---------------------------------------------------------------------------------------------*/
+.float_left {
+	float: left;
+	}
+.float_right {
+	float: right;
+	}
+
+/* テーブル
+============================================================================================ */
+/* 標準
+---------------------------------------------------------------------------------------------*/
+table {
+        width: auto;
+        font-size: 1em;
+        border-collapse:collapse;
+        margin:1em 1%;
+}
+table th {
+        width: auto;
+        border:solid 1px #d2d2d2;
+        padding:6px 12px;
+        text-align:center;
+	font-weight: bold;
+}
+table td {
+	width: auto;
+        border:solid 1px #d2d2d2;
+        padding:6px 12px;
+}
+
+/* パターン01
+---------------------------------------------------------------------------------------------*/
+.t01 {
+	width: auto;
+	border-spacing: 0;
+	font-size: 1em;
+	margin: 1em 1%;
+	}
+
+.t01 th {
+	width: auto;
+	background: #c9c0bb;
+	font-weight: bold;
+	border: 1px solid #aaa;
+	padding: 6px 12px;
+	text-align: center;
+	}
+
+.t01 td {
+	padding: 6px 12px;
+	border-bottom: 1px solid #aaa;
+	border-left: 1px solid #aaa;
+	text-align: right;
+	}
+
+.t01 tr td:last-child { border-right: 1px solid #aaa; }
+.t01 tr td:first-child { text-align: left; }
+
+.t01 tr { background: #fff; }
+.t01 tr:nth-child(2n+1) { background: #f3f4f5; }
+.table_input {
+        width: auto;
+        font-size: 100%;
+        border: solid  0px #ffffff;
+        outline-style:none;    /*輪郭線のスタイル*/
+        margin:0px;
+}
+.table_input th {
+	width: 100%;
+	border: solid  0px #ffffff;
+}
+.table__input tr td {
+	width: auto ;
+        border: solid  0px #ffffff;
+	}
+
+/* パターン02
+---------------------------------------------------------------------------------------------*/
+.t02 {
+	width: auto;
+	border-spacing: 0;
+	font-size: 1em;
+	margin: 1em 1%;
+	}
+
+.t02 th {
+	background: #c9c0bb;
+	font-weight: bold;
+	border: 1px solid #aaa;
+	padding: 6px 12px;
+	text-align: center;
+	}
+
+.t02 td {
+	padding: 6px 12px;
+	border-bottom: 1px solid #aaa;
+	border-left: 1px solid #aaa;
+	text-align: center;
+	}
+
+.t02 tr td:last-child { border-right: 1px solid #aaa; }
+.t02 tr { background: #fff; }
+.t02 tr:nth-child(2n+1) { background: #f3f4f5; }
+
+/* パターン07 左寄せ
+---------------------------------------------------------------------------------------------*/
+.t07 {
+	width: 96%;
+	border-spacing: 0;
+	font-size: 1em;
+	margin: 1em 1%;
+	}
+
+.t07 th {
+	width: auto;
+/*	background: #D9EDFC;*/
+background: #c9c0bb;
+	font-weight: bold;
+	border: 1px solid #aaa;
+	padding: 6px 12px;
+	text-align: center;
+	}
+
+.t07 td {
+	padding: 6px 12px;
+	border-bottom: 1px solid #aaa;
+	border-left: 1px solid #aaa;
+	text-align: left;
+	}
+
+.t07 tr td:last-child { border-right: 1px solid #aaa; }
+.t07 tr td:first-child { text-align: left; }
+
+.t07 tr { background: #fff; }
+.t07 tr:nth-child(2n+1) { background: #f3f4f5; }
+
+/* パターン04
+---------------------------------------------------------------------------------------------*/
+.t04 {
+        width: auto;
+        border-spacing: 0;
+        font-size: 1em;
+        margin: 1em 1%;
+        }
+.t04 th {
+	width: auto;
+        background: #c9c0bb;
+        font-weight: bold;
+        border: 1px solid #aaa;
+        padding: 6px 12px;
+        text-align: center;
+        }
+
+.t04 td {
+        padding: 6px 12px;
+        border-bottom: 1px solid #aaa;
+        border-left: 1px solid #aaa;
+        text-align: left;
+        }
+
+.t04 caption {
+        caption-side: top;
+        width: auto;
+        text-align: left;
+        padding-bottom: 0.5em;
+        font-weight: bold;
+        }
+
+.t04 tr td:last-child { border-right: 1px solid #aaa; }
+
+.t04 tr { background: #fff; }
+.t04 tr:nth-child(2n+1) { background: #f3f4f5; }
+
+/* パターン08
+ * ---------------------------------------------------------------------------------------------*/
+.t08 {
+        width: auto;
+        border-spacing: 0;
+        font-size: 1em;
+        margin: 1em 1%;
+        }
+.t08 th {
+        width: auto;
+        background: #c9c0bb;
+        font-weight: bold;
+        border: 1px solid #aaa;
+        padding: 6px 12px;
+        text-align: center;
+        }
+
+.t08 td {
+        padding: 6px 12px;
+        border-bottom: 1px solid #aaa;
+        border-left: 1px solid #aaa;
+        text-align: right;
+        }
+
+.t08 caption {
+        caption-side: top;
+        width: auto;
+        text-align: left;
+        padding-bottom: 0.5em;
+        font-weight: bold;
+        }
+
+.t08 tr td:last-child { border-right: 1px solid #aaa; }
+
+.t08 tr { background: #fff; }
+.t08 tr:nth-child(2n+1) { background: #f3f4f5; }
+
+/* パターン05 横見出しが水色　縦見出しが黄色　http://www.ddbj.nig.ac.jp/sub/tpa_table.html で使用
+---------------------------------------------------------------------------------------------*/
+.t05 {
+        width: auto;
+        border-spacing: 0;
+        font-size: 1em;
+        margin: 1em 1em;
+	font-family: Arial,Helvetica,Geneva,Swiss,SunSans-Regular ;
+        }
+
+.t05 th {
+	width: auto;
+        background: #ceffff;
+        border: 1px solid #aaa;
+	font-weight: normal;
+        padding: 6px 12px;
+        text-align: center;
+        }
+
+.t05 td {
+        padding: 6px 12px;
+        border: 1px solid #aaa;
+        text-align: left;
+        }
+
+.t05 tr:nth-child(-n+10) td:first-child {
+	background-color: #ffff99;
+	text-align: center;
+	}
+.t05 tr:nth-child(-n+10) td:nth-child(2){
+        background-color: #ffff99;
+	font-weight: bold;
+        text-align: center;
+        }
+.t05 tr:nth-child(n+11) td:first-child {
+        background-color: #99ff66;
+        text-align: center;
+        }
+.t05 tr:nth-child(n+11) td:nth-child(2){
+        background-color: #99ff66;
+        font-weight: bold;
+        text-align: center;
+        }
+/* パターン06 横見出しが水色　縦見出しが灰色　http://www.ddbj.nig.ac.jp/sub/tpa_table.html で使用
+---------------------------------------------------------------------------------------------*/
+.t06 {
+        width: auto;
+        border-spacing: 0;
+        font-size: 1em;
+        margin: 1em 1em;
+	font-family: Arial,Helvetica,Geneva,Swiss,SunSans-Regular ;
+        }
+
+.t06 th {
+        width: auto;
+        background: #ceffff;
+        border: 1px solid #aaa;
+        font-weight: normal;
+        padding: 6px 12px;
+        text-align: center;
+        }
+
+.t06 td {
+        padding: 6px 12px;
+        border: 1px solid #aaa;
+        text-align: left;
+        }
+
+.t06 tr td:first-child {
+        background-color: #bdbabd;
+        text-align: center;
+        }
+.t06 tr td:nth-child(2){
+        background-color: #bdbabd;
+        font-weight: bold;
+        text-align: center;
+        }
+
+
+/** 枠線が透明なテーブル **/
+.table_toumei {
+        width: auto;
+        border-spacing: 0;
+        font-size: 1em;
+        margin: 1em 1%;
+	border: solid  0px #ffffff;
+        }
+
+.table_toumei th {
+        width: auto;
+        background: #c9c0bb;
+        font-weight: bold;
+        border: 0px solid #fff;
+        padding: 6px 12px;
+        text-align: center;
+        }
+
+.table_toumei td {
+        padding: 6px 12px;
+        border: 0px solid #fff;
+        text-align: left;
+        }
+
+/** table Journal Ranking ページ用 **/
+.t_jr {
+        width: 98%;
+        border-spacing: 0;
+        font-size: 1em;
+        margin: 1em 1%;
+        }
+.t_jr th {
+        width: auto;
+        background: #c9c0bb;
+        font-weight: bold;
+        border: 1px solid #aaa;
+        padding: 6px 12px;
+        text-align: center;
+        }
+.t_jr td {
+        padding: 6px 12px;
+        border-bottom: 1px solid #aaa;
+        border-left: 1px solid #aaa;
+        text-align: right;
+        }
+
+.t_jr tr td:first-child { text-align: center; width: 10%; }
+.t_jr tr td:nth-child(2) { width: 20%; }
+.t_jr tr td:nth-child(3) { text-align: left; }
+.t_jr tr td:last-child {  width: 20%; border-right: 1px solid #aaa; }
+
+.t_jr tr { background: #fff; }
+.t_jr tr:nth-child(2n+1) { background: #f3f4f5; }
+
+/** table ClustalW ページ用 **/
+.t03 {
+        width: auto;
+        border-spacing: 0;
+        font-size: 1em;
+        margin: 1em 2em;
+        }
+
+.t03 th {
+        width: auto;
+        background: #7db3e8;
+        font-weight: bold;
+        border: 1px solid #d2d2d2;
+        padding: 6px 12px;
+        text-align: left;
+        }
+
+.t03 td {
+        padding: 6px 12px;
+        border-bottom: 1px solid #d2d2d2;
+        border-left: 1px solid #d2d2d2;
+        text-align: left;
+        }
+
+.t03 tr td:last-child { border-right: 1px solid #d2d2d2; }
+.t03 th:last-child { width: 200px; }
+.t03 tr td:nth-child(1) { background: #9ee3fe; }
+.t03 tr td:nth-child(2) { background: #cff1fd; }
+.t03 tr td:nth-child(3) { background: #d4e6f8; }
+
+/* pre
+-------------------------------------------------------------- */
+.textbox pre {
+        font-family: "ＭＳ ゴシック",Courier,monospace;i
+        font-size:9pt;
+        line-height:10pt;
+        white-space: pre;
+        color: #222;
+        margin: 1em 0;
+        padding: 1em;
+}
+pre.flatfile {
+        font-family: Courier;
+        font-size:9pt;
+        line-height:10pt;
+        white-space: pre;
+        color: #222;
+        margin: 1em 0;
+        padding: 1em;
+        background-color: #ffffcc;
+        }
+
+pre.pre_gray {
+        font-family: "ＭＳ ゴシック",Courier,monospace;
+        line-height:10pt;
+        white-space: pre;
+        color: #222;
+        margin: 1em 0;
+        padding: 1em;
+        background-color: #f7f7f7;
+        float: left;
+	}
+pre.pre_blue {
+       	font-family:  "ＭＳ ゴシック",Courier,monospace;
+        line-height:10pt;
+        white-space: pre;
+        color: #222;
+        margin: 1em 0;
+        padding: 1em;
+        background-color: #E0F0FF;
+	float: left;
+}
+/* 背景色
+-------------------------------------------------------------- */
+/** 青 **/
+.bgc_blue {
+        text-align: left;
+        text-decoration:none;
+        padding: 1em;
+        margin: 2em 0;
+        background-color: #cceaff;
+        border-radius: 10px;
+        }
+/** オレンジ **/
+.bgc_orange {
+        text-align: left;
+        text-decoration:none;
+        padding: 1em;
+        margin: 2em 0;
+        background-color: #fff0e2;
+        border-radius: 10px;
+        }
+/** アイボリー **/
+.bgc_ivory {
+        text-align: left;
+        text-decoration:none;
+        padding: 1em;
+        margin: 2em 0;
+        background-color:#fffff0;
+        width:auto;
+        border-radius: 10px;
+        }
+
+/** マゼンタ　枠 **/
+.waku_magenta {
+	border: 6px solid #cc0099;
+        padding: 1em;
+        text-align: left;
+        margin: 1em 0;
+        width:auto;
+        border-radius: 10px;
+	}
+
+/** マゼンタ　枠 **/
+.waku_black {
+        border: 2px solid #474546;
+        padding: 1em;
+        text-align: left;
+        margin: 1em 0;
+        width:auto;
+        border-radius: 10px;
+        }
+
+
+
+
+/* =サイドナビゲーション
+ * -------------------- */
+#side_navigation {
+	float: left;
+	margin-top: 15px;
+	font-size: 90%;
+	width: 20%;
+/*	font-family: Candara, Arial, 'ヒラギノ角ゴ Pro W3', 'Hiragino Kaku Gothic Pro', 'メイリオ', Meiryo, 'MS Pゴシック', Verdana, sans-serif;
+*/}
+#side_navigation h5 {
+	color: #7F4A14;
+	font-size: 120%;
+	font-weight: bold;
+	border-bottom: 3px solid #f8ac6b;
+	margin-top: 1em;
+	padding: 2px 5px;
+}
+#side_navigation a {
+	display: block;
+}
+#side_navigation a:link {
+	color: #333;
+}
+#side_navigation a:visited {
+	color: #333;
+}
+#side_navigation ul.menu {
+	list-style: none;
+}
+#side_navigation ul.menu li {
+	border-bottom: 1px dotted #bbb;
+	padding: 2px 5px;
+}
+#side_navigation a {
+	padding: 1px 0;
+}
+#side_navigation li:hover > a {
+	color: #be5c09;
+	background: #f4f4f4;
+	text-decoration: none;
+}
+#side_navigation li.current_page_item > a {
+	font-weight: bold;
+	color: #000;
+}
+.archive_textbox{
+	width: 75%;
+	float: left;
+}
+/* コンテンツ */
+/*#side_navigation #contents ul.menu li
+{*/
+	/*display: none;*/
+   /*     border-bottom: 1px dotted #bbb;
+	padding: 2px 5px;
+
+}*/
+/*#side_navigation #contents ul.menu li.current_page_parent,
+#side_navigation #contents ul.menu li.current_page_parent ul,
+#side_navigation #contents ul.menu li.current_page_parent ul li {
+	display: block;
+}
+#side_navigation #contents li.current_page_parent > a {
+	display: none;
+}
+*/
+.archive {
+	float: left;
+	width: 75%;
+	margin-right: 2em;
+	margin-left: 1em;
+}
+/* ニュース表示 ボタン */
+.newsbox .btn {
+	float: left;
+	margin-left: 1%;
+	display: block;
+	}
+.newsbox .date {
+        float: left;
+        margin-left: 2%;
+        display: block;
+        width: 13%;
+        }
+.newsbox .title {
+        float: left;
+        margin-left: 1%;
+        display: block;
+        width: 76%;
+        }
+
+
+
+
+.btnposi .btn {
+        float: left;
+        margin-top: 5px;
+        margin-left: 5px;
+        display: block;
+        width: auto;
+        }
+
+.ball { width: 8px; height: 13px; border-radius: 13px; float: left; margin-right: 3px;
+}
+.ball_blue { background: #0099cc; }
+.ball_red { background: #d81b21; }
+.ball_gray { background: #6e6e6e; }
+.ball_green { background: #64991e; }
+.ball_rosy { background: #d81b21; }
+.ball_pink { background: #f895c2; }
+.ball_orange { background: #f78d1d; }
+.ball_purple { background: #9400ff; }
+
+.btn:hover {
+	cursor: pointer;
+}
+
+.btnposi {
+	float: right;
+}
+.blue {
+	float: left;
+	border-bottom: 1px solid #0099CC;
+	margin-left: 5px;
+	}
+/* gray */
+.gray {
+	float: left;
+	margin-left: 5px;
+	border-bottom: 1px solid #6e6e6e;
+	}
+/* orange */
+.orange {
+	float: left;
+	margin-left: 5px;
+	border-bottom: 1px solid #f78d1d;
+	}
+/* red */
+.red {
+	float: left;
+	margin-left: 5px;
+	border-bottom: 1px solid #d81b21;
+}
+/* rosy */
+.rosy {
+	float: left;
+	margin-left: 5px;
+	border-bottom: 1px solid #da5867;
+}
+/* green */
+.green {
+	float: left;
+	border-bottom: 1px solid #64991e;
+	margin-left: 5px;
+	}
+/* pink */
+.pink {
+	float: left;
+	margin-left: 5px;
+	border-bottom: 1px solid #f895c2;
+	}
+/* purple */
+.purple {
+        float: left;
+        margin-left: 5px;
+        border-bottom: 1px solid #9400ff;
+	}
+
+.ddbjing-show {
+	cursor:pointer;
+	cursor:hand;
+	}
+
+

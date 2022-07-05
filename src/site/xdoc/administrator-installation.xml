@@ -1,0 +1,78 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<document xmlns="http://maven.apache.org/XDOC/2.0" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+	xsi:schemaLocation="http://maven.apache.org/XDOC/2.0 http://maven.apache.org/xsd/xdoc-2.0.xsd">
+
+	<properties>
+		<title>DDBJ WebAPI Administrator's Manual | Installation</title>
+		<author email="osamu.ogasawara@gmail.com">Osamu Ogasawara</author>
+	</properties>
+
+	<!-- Optional HEAD element, which is copied as is into the XHTML <head> 
+		element -->
+	<head>
+		<title>Administrator's Manual - Installation</title>
+	</head>
+
+	<body>
+	<section name="システム要件等の前提条件">
+	<p>このWebアプリはDDBJ WebAPI (WABI : WebAPI for Biology)を内部で呼び出すので、まずwabiをインストールする必要がある。
+	その他インストールに必要なシステム要件等はWABIと同じである。</p>
+	<p>システム要件などの実際は、wabiドキュメント中の<a href="http://rgm3.lab.nig.ac.jp:8080/hudson-2.2.1/job/wabi/ws/target/site/administrator-installation.html">「システム要件」「関連サーバー」</a>参照。</p>
+	
+	<p>CSSなどについて、一部DDBJホームページのファイルを直接指しているので、その環境が変わると画面が乱れる等影響が出る。</p>
+	</section>
+	
+	<section name="ローカルのテスト環境の作成">		
+		<subsection name="コンパイル・デプロイの方法">
+		<p>subversionサーバーからソースコードをダウンロード。以下コマンドラインでダウンロードするやり方だがEclipseからやってもよい。</p>
+		<source>
+svn http://www.ogalab.net/svn/repos/blast/trunk blast
+		</source>
+		
+		<p>mavenがローカルリポジトリにアクセスできるようにするために$HOME/.m2/settings.xmlを作成する。
+		詳細については<a href="http://rgm2.lab.nig.ac.jp/wiki/index.php/Maven%E3%81%AE%E4%BD%BF%E3%81%84%E6%96%B9">OgaReportの「Mavenの使い方」</a>を参照のこと</p>
+		<source><![CDATA[
+<?xml version="1.0" encoding="UTF-8"?>
+<settings>
+  <servers>
+    <server>
+      <id>private-webdav-repository</id>
+      <username>yourname</username>
+      <password>yourpassword</password>
+    </server>
+ 
+    <server>
+      <id>private-webdav-snapshot-repository</id>
+      <username>yourname</username>
+      <password>yourpassword</password>
+    </server>
+ <!-- 
+    <server>
+      <id>tomcat7</id>
+      <username>tomcat-script</username>
+      <password>yourpassword</password>
+    </server>
+-->
+  </servers>
+ 
+</settings>
+		]]>
+		</source>
+		
+		<p>コンパイル</p>
+		<source>
+mvn compile # コンパイルのみ。
+mvn package # warファイルができる。
+mvn site    # このサイトができる。
+mvn javadoc:javadoc
+		</source>
+		</subsection>
+		
+		<p>出来上がったwarファイルをTomcat7のwebappディレクトリに置けば動作する。</p>
+		
+		</section>
+	
+	
+	</body>
+	</document>
+	

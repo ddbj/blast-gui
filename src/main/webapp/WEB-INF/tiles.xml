@@ -1,0 +1,207 @@
+<?xml version="1.0" encoding="UTF-8" ?>
+<!DOCTYPE tiles-definitions PUBLIC
+       "-//Apache Software Foundation//DTD Tiles Configuration 2.0//EN"
+       "http://tiles.apache.org/dtds/tiles-config_2_0.dtd">
+<tiles-definitions>
+
+	<!-- 共通定義 ****************************************************************************** -->
+
+	<!-- 共通レイアウト -->
+	<definition name="basic_layout" template="/WEB-INF/jsp/basic_layout.jsp">
+		<put-attribute name="page_head" value="" />
+		<put-attribute name="header"    value="" />
+		<put-attribute name="content"   value="" />
+		<put-attribute name="goto-top"  value="/WEB-INF/jsp/goto-top.jsp" />
+		<put-attribute name="footer"    value="/WEB-INF/jsp/footer.jsp" />
+	</definition>
+
+	<!-- header部分（日/英 切替えボタンあり） -->
+	<definition name="header_language_chooser" template="/WEB-INF/jsp/header.jsp">
+		<put-attribute name="language_chooser" value="/WEB-INF/jsp/header_language_chooser.jsp" />
+	</definition>
+
+	<!-- header部分（日/英 切替えボタンなし） -->
+	<definition name="header_not_language_chooser" template="/WEB-INF/jsp/header.jsp">
+		<put-attribute name="language_chooser" value="" />
+	</definition>
+
+	<!-- 個別定義 ****************************************************************************** -->
+
+	<!-- blastn（共通レイアウトを継承） -->
+	<definition name="blastn" extends="basic_layout">
+		<put-attribute name="page_head" value="/WEB-INF/jsp/page_head_search_condition_blastn.jsp" />
+		<put-attribute name="header"    value="header_language_chooser" type="definition" />
+		<put-attribute name="content"   value="blastn_content" type="definition" />
+	</definition>
+
+	<definition name="blastn_content" template="/WEB-INF/jsp/content_layout.jsp">
+		<put-attribute name="breadcrumb" value="/WEB-INF/jsp/content_breadcrumb.jsp" />
+		<put-attribute name="heading"    value="/WEB-INF/jsp/content_heading.jsp" />
+		<put-attribute name="sidemenu"   value="/WEB-INF/jsp/content_sidemenu.jsp" />
+		<put-list-attribute name="content-body">
+			<add-attribute value="/WEB-INF/jsp/content_query.jsp" />
+			<add-attribute value="/WEB-INF/jsp/content_dataset_nucleotide.jsp" />
+			<add-attribute value="/WEB-INF/jsp/content_optional.jsp" />
+		</put-list-attribute>
+	</definition>
+
+	<!-- megablast（共通レイアウトを継承） -->
+	<definition name="megablast" extends="basic_layout">
+		<put-attribute name="page_head" value="/WEB-INF/jsp/page_head_search_condition_megablast.jsp" />
+		<put-attribute name="header"    value="header_language_chooser" type="definition" />
+		<put-attribute name="content"   value="megablast_content" type="definition" />
+	</definition>
+
+	<definition name="megablast_content" template="/WEB-INF/jsp/content_layout.jsp">
+		<put-attribute name="breadcrumb" value="/WEB-INF/jsp/content_breadcrumb.jsp" />
+		<put-attribute name="heading"    value="/WEB-INF/jsp/content_heading.jsp" />
+		<put-attribute name="sidemenu"   value="/WEB-INF/jsp/content_sidemenu.jsp" />
+		<put-list-attribute name="content-body">
+			<add-attribute value="/WEB-INF/jsp/content_query.jsp" />
+			<add-attribute value="/WEB-INF/jsp/content_dataset_nucleotide.jsp" />
+			<add-attribute value="/WEB-INF/jsp/content_optional.jsp" />
+		</put-list-attribute>
+	</definition>
+
+	<!-- tblastn（共通レイアウトを継承） -->
+	<definition name="tblastn" extends="basic_layout">
+		<put-attribute name="page_head" value="/WEB-INF/jsp/page_head_search_condition_tblastn.jsp" />
+		<put-attribute name="header"    value="header_language_chooser" type="definition" />
+		<put-attribute name="content"   value="tblastn_content" type="definition" />
+	</definition>
+
+	<definition name="tblastn_content" template="/WEB-INF/jsp/content_layout.jsp">
+		<put-attribute name="breadcrumb" value="/WEB-INF/jsp/content_breadcrumb.jsp" />
+		<put-attribute name="heading"    value="/WEB-INF/jsp/content_heading.jsp" />
+		<put-attribute name="sidemenu"   value="/WEB-INF/jsp/content_sidemenu.jsp" />
+		<put-list-attribute name="content-body">
+			<add-attribute value="/WEB-INF/jsp/content_query.jsp" />
+			<add-attribute value="/WEB-INF/jsp/content_dataset_nucleotide.jsp" />
+			<add-attribute value="/WEB-INF/jsp/content_optional_expect.jsp" />
+		</put-list-attribute>
+	</definition>
+
+	<!-- tblastx（共通レイアウトを継承） -->
+	<definition name="tblastx" extends="basic_layout">
+		<put-attribute name="page_head" value="/WEB-INF/jsp/page_head_search_condition_tblastx.jsp" />
+		<put-attribute name="header"    value="header_language_chooser" type="definition" />
+		<put-attribute name="content"   value="tblastx_content" type="definition" />
+	</definition>
+
+	<definition name="tblastx_content" template="/WEB-INF/jsp/content_layout.jsp">
+		<put-attribute name="breadcrumb" value="/WEB-INF/jsp/content_breadcrumb.jsp" />
+		<put-attribute name="heading"    value="/WEB-INF/jsp/content_heading.jsp" />
+		<put-attribute name="sidemenu"   value="/WEB-INF/jsp/content_sidemenu.jsp" />
+		<put-list-attribute name="content-body">
+			<add-attribute value="/WEB-INF/jsp/content_query.jsp" />
+			<add-attribute value="/WEB-INF/jsp/content_dataset_nucleotide.jsp" />
+			<add-attribute value="/WEB-INF/jsp/content_optional_expect.jsp" />
+		</put-list-attribute>
+	</definition>
+
+	<!-- blastp（共通レイアウトを継承） -->
+	<definition name="blastp" extends="basic_layout">
+		<put-attribute name="page_head" value="/WEB-INF/jsp/page_head_search_condition_blastp.jsp" />
+		<put-attribute name="header"    value="header_language_chooser" type="definition" />
+		<put-attribute name="content"   value="blastp_content" type="definition" />
+	</definition>
+
+	<definition name="blastp_content" template="/WEB-INF/jsp/content_layout.jsp">
+		<put-attribute name="breadcrumb" value="/WEB-INF/jsp/content_breadcrumb.jsp" />
+		<put-attribute name="heading"    value="/WEB-INF/jsp/content_heading.jsp" />
+		<put-attribute name="sidemenu"   value="/WEB-INF/jsp/content_sidemenu.jsp" />
+		<put-list-attribute name="content-body">
+			<add-attribute value="/WEB-INF/jsp/content_query.jsp" />
+			<add-attribute value="/WEB-INF/jsp/content_dataset_protein.jsp" />
+			<add-attribute value="/WEB-INF/jsp/content_optional_expect.jsp" />
+		</put-list-attribute>
+	</definition>
+
+	<!-- blastx（共通レイアウトを継承） -->
+	<definition name="blastx" extends="basic_layout">
+		<put-attribute name="page_head" value="/WEB-INF/jsp/page_head_search_condition_blastx.jsp" />
+		<put-attribute name="header"    value="header_language_chooser" type="definition" />
+		<put-attribute name="content"   value="blastx_content" type="definition" />
+	</definition>
+
+	<definition name="blastx_content" template="/WEB-INF/jsp/content_layout.jsp">
+		<put-attribute name="breadcrumb" value="/WEB-INF/jsp/content_breadcrumb.jsp" />
+		<put-attribute name="heading"    value="/WEB-INF/jsp/content_heading.jsp" />
+		<put-attribute name="sidemenu"   value="/WEB-INF/jsp/content_sidemenu.jsp" />
+		<put-list-attribute name="content-body">
+			<add-attribute value="/WEB-INF/jsp/content_query.jsp" />
+			<add-attribute value="/WEB-INF/jsp/content_dataset_protein.jsp" />
+			<add-attribute value="/WEB-INF/jsp/content_optional_expect.jsp" />
+		</put-list-attribute>
+	</definition>
+
+	<!-- 検索中画面（共通レイアウトを継承） -->
+	<definition name="search_result" extends="basic_layout">
+		<put-attribute name="page_head" value="/WEB-INF/jsp/page_head_search_result.jsp" />
+		<put-attribute name="header"    value="header_not_language_chooser" type="definition" />
+		<put-attribute name="content"   value="search_result_content" type="definition" />
+	</definition>
+
+	<definition name="search_result_content" template="/WEB-INF/jsp/content_layout.jsp">
+		<put-attribute name="breadcrumb" value="/WEB-INF/jsp/content_breadcrumb.jsp" />
+		<put-attribute name="heading"    value="/WEB-INF/jsp/content_heading.jsp" />
+		<put-attribute name="sidemenu"   value="/WEB-INF/jsp/content_sidemenu.jsp" />
+		<put-list-attribute name="content-body">
+			<add-attribute value="/WEB-INF/jsp/content_report.jsp" />
+		</put-list-attribute>
+	</definition>
+
+	<!-- 検索結果画面（共通レイアウトを継承） -->
+	<definition name="blast_report" extends="basic_layout">
+		<put-attribute name="page_head" value="/WEB-INF/jsp/page_head_report.jsp" />
+		<put-attribute name="header"    value="header_not_language_chooser" type="definition" />
+		<put-attribute name="content"   value="report_content" type="definition" />
+	</definition>
+
+	<definition name="report_content" template="/WEB-INF/jsp/content_layout.jsp">
+		<put-attribute name="breadcrumb" value="/WEB-INF/jsp/content_breadcrumb.jsp" />
+		<put-attribute name="heading"    value="/WEB-INF/jsp/content_heading.jsp" />
+		<put-attribute name="sidemenu"   value="/WEB-INF/jsp/content_sidemenu.jsp" />
+		<put-list-attribute name="content-body">
+			<add-attribute value="/WEB-INF/jsp/content_report.jsp" />
+		</put-list-attribute>
+	</definition>
+
+	<!-- メール画面（共通レイアウトを継承） -->
+	<definition name="blast_mail" extends="basic_layout">
+		<put-attribute name="page_head" value="/WEB-INF/jsp/page_head_mail.jsp" />
+		<put-attribute name="header"    value="header_not_language_chooser" type="definition" />
+		<put-attribute name="content"   value="mail_content" type="definition" />
+	</definition>
+
+	<definition name="mail_content" template="/WEB-INF/jsp/content_layout.jsp">
+		<put-attribute name="breadcrumb" value="/WEB-INF/jsp/content_breadcrumb.jsp" />
+		<put-attribute name="heading"    value="/WEB-INF/jsp/content_heading.jsp" />
+		<put-attribute name="sidemenu"   value="/WEB-INF/jsp/content_sidemenu.jsp" />
+		<put-list-attribute name="content-body">
+			<add-attribute value="/WEB-INF/jsp/content_mail.jsp" />
+		</put-list-attribute>
+	</definition>
+
+	<!-- Result viewer（共通レイアウトを継承） -->
+	<definition name="blast_viewer" extends="basic_layout">
+		<put-attribute name="page_head" value="/WEB-INF/jsp/page_head_viewer.jsp" />
+		<put-attribute name="header"    value="header_language_chooser" type="definition" />
+		<put-attribute name="content"   value="viewer_content" type="definition" />
+	</definition>
+
+	<definition name="viewer_content" template="/WEB-INF/jsp/content_viewer_layout.jsp">
+		<put-attribute name="breadcrumb" value="/WEB-INF/jsp/content_breadcrumb.jsp" />
+		<put-attribute name="heading"    value="/WEB-INF/jsp/content_heading.jsp" />
+		<put-attribute name="sidemenu"   value="/WEB-INF/jsp/content_sidemenu.jsp" />
+		<put-list-attribute name="content-body">
+			<add-attribute value="/WEB-INF/jsp/content_viewer.jsp" />
+		</put-list-attribute>
+	</definition>
+
+	<!-- セキュリティテスト -->
+	<definition name="test.security_application_scan" template="/WEB-INF/jsp/test/security_application_scan.jsp">
+		<put-attribute name="title" value="DDBJ | BLAST | Test | Security Application Scan" />
+	</definition>
+
+</tiles-definitions>
